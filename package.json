@@ -4,8 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-dom": "^16.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,5 +20,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react-scripts": "2.1.5"
+  }
 }
