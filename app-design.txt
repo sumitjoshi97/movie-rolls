@@ -1,0 +1,6 @@
+views --
+
+ - home - clicks for show/movie
+ - movie/show page - rate or favorite show/movie if logged in otherwise send to log in page, share movies with google, facebook, twitter or email
+ - log in - signup/login user
+ - favorites page - list of all favorite movies and shows
