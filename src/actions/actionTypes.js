@@ -1,0 +1,4 @@
+export const SET_CURRENT_MOVIES = 'SET_CURRENT_MOVIES'
+export const SET_CURRENT_SHOWS = 'SET_CURRENT_SHOWS'
+
+export const SET_ERROR = 'SET_ERROR'
