@@ -1,0 +1,32 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 67rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & > * {
+    cursor: pointer;
+  }
+
+  &__movies {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid black;
+    margin-right: 10rem;
+  }
+
+  &__shows {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5rem solid black;
+    margin-left: 10rem;
+  }
+}
+
+// .black {
+//   position: absolute;
+//   width: 100%;
+//   bottom: -1rem;
+//   height: 0.4rem;
+//   background: #000;
+// }

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+
+  &__left {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    & > * {
+      padding-right: 3rem;
+    }
+
+    &__brand {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    list-style: none;
+  }
+}

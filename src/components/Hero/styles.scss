@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70rem;
+  background: rgba(0, 0, 0, 0.5);
+
+  &__info {
+    position: absolute;
+    width: 100%;
+    top: 24rem;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: row;
+    &__img {
+      height: 26rem;
+      width: 20rem;
+      background: #000;
+    }
+    &__text {
+      padding-left: 2rem;
+      width: 70rem;
+      &__header {
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+      }
+      &__summary {
+      }
+    }
+  }
+}
