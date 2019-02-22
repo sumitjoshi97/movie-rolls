@@ -1,3 +1,3 @@
-export { error } from './error'
+export { setError } from './error'
 
-export { getCurrentMovies } from './movies'
+export { getCurrentMovies, getLatestMovie } from './movies'
