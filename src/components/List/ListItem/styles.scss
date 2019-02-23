@@ -1,0 +1,12 @@
+.list-item {
+  display: inline-block;
+  padding-right: 2rem;
+  &__img {
+    height: 18rem;
+    background: #000;
+    width: 30rem;
+  }
+
+  &__name {
+  }
+}

@@ -1,0 +1,19 @@
+.list {
+  padding: 4rem;
+  &__header {
+    padding-bottom: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
