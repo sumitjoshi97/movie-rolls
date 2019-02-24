@@ -5,7 +5,7 @@ import './styles.scss'
 
 const Hero = ({ title, poster, backdrop, rating, summary, adult, year }) => {
   const heroBackdrop = {
-    background: `https://image.tmdb.org/t/p/original/${backdrop}, rgba(0,0,0,0.45)`
+    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original${backdrop})`
   }
 
   return (
