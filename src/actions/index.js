@@ -1,5 +1,17 @@
 export { setError } from './error'
 
-export { getCurrentMovies, getLatestMovie } from './movies'
+export {
+  getCurrentMovies,
+  getPopularMovies,
+  getTopMovies,
+  getUpcomingMovies,
+  getSimilarMovies
+} from './movies'
 
-export { getCurrentShows } from './shows'
+export {
+  getCurrentShows,
+  getAiringTodayShows,
+  getPopularShows,
+  getTopShows,
+  getSimilarShows
+} from './shows'
