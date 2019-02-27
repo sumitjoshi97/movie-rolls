@@ -6,13 +6,12 @@ export default class Nav extends Component {
   state = {
     isActive: [false, false]
   }
-  changeData = e => {}
+
+  renderNav = () => {
+    return this.props.options.map(option => <NavItem name={option} />)
+  }
+
   render() {
-    return (
-      <nav className='nav'>
-        <NavItem name='movies' />
-        <NavItem name='tv shows' />
-      </nav>
-    )
+    return <nav className='nav'>{this.renderNav()}</nav>
   }
 }
