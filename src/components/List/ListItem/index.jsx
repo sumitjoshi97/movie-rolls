@@ -1,14 +1,34 @@
-import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
-import './styles.scss'
+import * as actions from '../../../actions'
 
-export default class ListItem extends Component {
+
   render() {
+    const { pageId, type, poster, name, setType } = this.props
+
     return (
       <div className='list-item'>
-        <div src='' alt='' className='list-item__img' />
-        <div className='list__item__name'>something</div>
+        <Link to={`/details/${pageId}`} onClick={() => setType(type)}>
+          <img
+            src={`https://image.tmdb.org/t/p/w185/${poster}`}
+            alt={name}
+            className='list-item__img'
+          />
+          <div className='list__item__name'>{name}</div>
+        </Link>
+        )
       </div>
     )
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  setType: type => dispatch(actions.setItemType(type))
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ListItem)
