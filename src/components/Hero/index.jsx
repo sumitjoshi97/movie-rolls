@@ -33,7 +33,12 @@ const Hero = ({
           </div>
           <div className='hero__info__text__type'>
             <span>{type}</span>
+
+            {adult ? (
               <span className='hero__info__text__type__adult'>'18+'</span>
+            ) : (
+              ''
+            )}
 
             <span className='hero__info__text__year'>{year}</span>
           </div>
