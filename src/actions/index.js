@@ -15,3 +15,10 @@ export {
   getTopShows,
   getSimilarShows
 } from './shows'
+
+export {
+  setItemType,
+  getQueryItem,
+  getQueryItemCredits,
+  getQueryItemVideos
+} from './item'
