@@ -14,7 +14,7 @@ const Hero = ({
   year
 }) => {
   const heroBackdrop = {
-    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original${backdrop})`
+    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original${backdrop})`
   }
 
   return (
