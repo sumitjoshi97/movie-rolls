@@ -1,9 +1,18 @@
+import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import * as actions from '../../../actions'
 
+class ListItem extends PureComponent {
+  static propTypes = {
+    pageId: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+    poster: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    setType: PropTypes.func.isRequired
+  }
 
   render() {
     const { pageId, type, poster, name, setType } = this.props
