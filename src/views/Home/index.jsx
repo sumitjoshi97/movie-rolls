@@ -32,9 +32,23 @@ class Home extends Component {
     fetchCurrentMovies: PropTypes.func
   }
 
+  state = {
+    currentType: 'movie'
+  }
+
   componentDidMount() {
     this.props.fetchCurrentMovies()
     this.props.fetchCurrentShows()
+
+    if (this.state.currentType === 'movie') {
+      this.props.fetchPopularMovies()
+      this.props.fetchUpcomingMovies()
+      this.props.fetchTopMovies()
+    } else {
+      this.props.fetchPopularShows()
+      this.props.fetchAiringShows()
+      this.props.fetchTopShows()
+    }
   }
 
   renderHero = () => {
@@ -59,7 +73,7 @@ class Home extends Component {
               poster={slide.data.poster_path}
               backdrop={slide.data.backdrop_path}
               rating={slide.data.vote_average}
-              type={}
+              type={slide.type}
               summary={slide.data.overview}
               adult={slide.data.adult}
               year={slide.data.release_date.split('-')[0]}
@@ -84,28 +98,85 @@ class Home extends Component {
 
     return renderData
   }
+
+  renderLists = () => {
+    if (this.state.currentType === 'movie') {
+      const {
+        currentMovies,
+        popularMovies,
+        topMovies,
+        upcomingMovies
+      } = this.props
+
+      if (currentMovies && popularMovies && topMovies && upcomingMovies) {
+        return (
+          <>
+            <List
+              type='movie'
+              name='in theaters'
+              items={currentMovies.results}
+            />
+            <List type='movie' name='popular' items={popularMovies.results} />
+            <List type='movie' name='upcoming' items={upcomingMovies.results} />
+            <List type='movie' name='top rated' items={topMovies.results} />
+          </>
+        )
+      }
+    } else {
+      const { currentShows, popularShows, topShows, airingShows } = this.props
+
+      if (currentShows && popularShows && topShows && airingShows) {
+        return (
+          <>
+            <List type='tv' name='airing now' items={currentShows.results} />
+            <List type='tv' name='popular' items={popularShows.results} />
+            <List type='tv' name='airing' items={airingShows.results} />
+            <List type='tv' name='top rated' items={topShows.results} />
+          </>
+        )
+      }
+    }
+  }
+
   render() {
     return (
       <div className='home'>
         <Header />
         <Slider {...sliderOptions}>{this.renderHero()}</Slider>
-        <Nav />
-        <List />
-        <List />
+        <Nav options={['movies', 'tv shows']} />
+        {this.renderLists()}
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
+  // movies state
   latest: state.movies.latest,
-  currentMovies: state.movies.currentMovies,
-  currentShows: state.shows.currentShows
+  currentMovies: state.movies.current,
+  popularMovies: state.movies.popular,
+  upcomingMovies: state.movies.upcoming,
+  topMovies: state.movies.top,
+
+  // shows state
+  currentShows: state.shows.current,
+  popularShows: state.shows.popular,
+  airingShows: state.shows.airingToday,
+  topShows: state.shows.top
 })
 
 const mapDispatchToProps = dispatch => ({
+  // movies actions
   fetchCurrentMovies: () => dispatch(actions.getCurrentMovies()),
-  fetchCurrentShows: () => dispatch(actions.getCurrentShows())
+  fetchPopularMovies: () => dispatch(actions.getPopularMovies()),
+  fetchUpcomingMovies: () => dispatch(actions.getUpcomingMovies()),
+  fetchTopMovies: () => dispatch(actions.getTopMovies()),
+
+  // TV shows actions
+  fetchCurrentShows: () => dispatch(actions.getCurrentShows()),
+  fetchPopularShows: () => dispatch(actions.getPopularShows()),
+  fetchAiringShows: () => dispatch(actions.getAiringTodayShows()),
+  fetchTopShows: () => dispatch(actions.getTopShows())
 })
 
 export default connect(
