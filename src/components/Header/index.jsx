@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import './styles.scss'
 
 export default class Header extends Component {
@@ -11,7 +13,9 @@ export default class Header extends Component {
           <li className='header__left__browse'>browse</li>
         </ul>
         <ul className='header__right'>
-          <li className='header__right__profile'>profile</li>
+          <li className='header__right__profile'>
+            <Link to='/profile/auth'>profile</Link>
+          </li>
         </ul>
       </div>
     )
