@@ -7,16 +7,8 @@
   justify-content: center;
 
   & > * {
-    text-transform: capitalize;
+    text-transform: uppercase;
+    margin: 0 8rem;
     cursor: pointer;
   }
-
-  &__item {
-    padding-bottom: 0.5rem;
-    border-bottom: 0.5rem solid transparent;
-    margin-right: 10rem;
-  }
-}
-.border {
-  border-bottom: 0.5rem solid #ff0000;
 }
