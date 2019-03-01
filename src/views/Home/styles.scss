@@ -1,0 +1,24 @@
+.slick-dots {
+  width: 40rem !important;
+  bottom: 50% !important;
+  right: -14rem;
+  transform: rotate(90deg);
+  li > button {
+    width: 6px !important;
+    height: 6px !important;
+    border: 1px solid #fff !important;
+    border-radius: 1rem;
+  }
+  &::before {
+    width: 0 !important;
+    height: 0 !important;
+    content: "" !important;
+  }
+}
+
+// .slick-active > button {
+//   background: #fff;
+//   width: 8px;
+//   height: 8px;
+// }
+// }

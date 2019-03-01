@@ -40,8 +40,24 @@
       &__date {
       }
       &__type {
+        text-transform: capitalize;
+
+        & > * {
+          padding-right: 1rem;
+          color: #888888;
+        }
+
+        &__adult {
+          border: 1px solid #888888;
+          border-radius: 4px;
+          padding: 0.5rem;
+          margin-right: 1rem;
+        }
       }
+
       &__summary {
+        color: #ddd;
+        padding-bottom: 1rem;
       }
       &__favorite-btn {
         padding: 1rem;

@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   background: transparent;
-
+  z-index: 4000;
   &__left {
     display: flex;
     flex-direction: row;
@@ -21,6 +21,8 @@
     &__brand {
       text-transform: uppercase;
       font-weight: 700;
+      font-size: 2rem;
+      color: rgb(76, 0, 255);
     }
   }
 
