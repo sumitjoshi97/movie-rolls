@@ -10,7 +10,7 @@ export default class RatingStars extends Component {
     let renderStars = []
 
     for (let i = 1; i <= 5; i++) {
-      if (i <= stars && i === Math.floor(stars)) {
+      if (i >= stars && i === Math.ceil(stars)) {
         renderStars.push(<Star key={i} type='half' />)
       } else if (i <= stars) {
         renderStars.push(<Star key={i} type='full' />)
