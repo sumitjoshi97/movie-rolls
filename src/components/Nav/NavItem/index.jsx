@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
 
 export default class NavItem extends Component {
-  state = {
-    isActive: false
-  }
-
-  handleClick = () => {
-    this.setState({
-      isActive: !this.state.isActive
-    })
-  }
   render() {
-    // const classes =
+    const style = {
+      active: {
+        borderBottom: '0.5rem solid #ff0000'
+      },
+      inActive: {
+        borderBottom: '0.5rem solid transparent'
+      }
+    }
+
     return (
       <div
-        className={this.state.isActive ? 'border' : ''}
+        style={this.props.isActive ? style.active : style.inActive}
         name={this.props.name}
-        onClick={this.handleClick}
+        onClick={() => this.props.setActive(this.props.index)}
       >
         {this.props.name}
       </div>
