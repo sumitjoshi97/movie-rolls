@@ -14,12 +14,16 @@ export default class CastItem extends PureComponent {
     return (
       <div className='list-item'>
         <img
-          src={`https://image.tmdb.org/t/p/w185/${poster}`}
+          src={
+            poster
+              ? `https://image.tmdb.org/t/p/w185/${poster}`
+              : require('../../../assets/placeholder.png')
+          }
           alt={name}
           className='list-item__img'
         />
-        <div className='list__item__name'>{name}</div>
-        <div className='list__item__name__sub'>{role}</div>
+        <div className='list-item__name'>{name}</div>
+        <div className='list-item__name__sub'>{role}</div>
       </div>
     )
   }
