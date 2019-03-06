@@ -16,8 +16,8 @@ export const fetchUser = () => dispatch => {
       dispatch(fetchUserSuccess(user))
     } else {
       dispatch(fetchUserSuccess(null))
-}
-})
+    }
+  })
 }
 
 //sign up user
@@ -35,7 +35,7 @@ export const loginUserWithEmailPassword = (email, password) => dispatch => {
     .signInWithEmailAndPassword(email, password)
     .then(res => console.log('success'))
     .catch(err => setError())
-  }
+}
 
 // login user with social
 export const loginUserWithSocial = provider => dispatch => {
@@ -45,3 +45,10 @@ export const loginUserWithSocial = provider => dispatch => {
     .then(res => console.log('success'))
     .catch(err => setError())
 }
+
+//////////////////////////////////////////////////////////////
+// set redirect path
+export const setRedirectPath = path => ({
+  type: actionTypes.SET_REDIRECT_PATH,
+  path
+})
