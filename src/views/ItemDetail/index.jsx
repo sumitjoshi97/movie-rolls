@@ -46,6 +46,7 @@ class ItemDetail extends Component {
       return (
         <Hero
           key={item.id}
+          pageId={item.id}
           title={item.title}
           poster={item.poster_path}
           backdrop={item.backdrop_path}

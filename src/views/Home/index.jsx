@@ -69,6 +69,7 @@ class Home extends Component {
           return (
             <Hero
               key={slide.data.id}
+              pageId={slide.data.id}
               title={slide.data.title}
               poster={slide.data.poster_path}
               backdrop={slide.data.backdrop_path}
@@ -83,6 +84,7 @@ class Home extends Component {
           return (
             <Hero
               key={slide.data.id}
+              pageId={slide.data.id}
               title={slide.data.name}
               poster={slide.data.poster_path}
               backdrop={slide.data.backdrop_path}
