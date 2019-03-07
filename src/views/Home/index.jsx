@@ -16,14 +16,11 @@ const sliderOptions = {
   arrows: false,
   dots: true,
   infinite: true,
-  vertical: true,
-  verticalSwiping: true,
-  fade: true,
-  speed: 3000,
+  speed: 800,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
   cssEase: 'linear'
 }
 
