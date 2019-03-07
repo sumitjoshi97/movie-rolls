@@ -21,13 +21,16 @@ class ListItem extends PureComponent {
       <div className='list-item'>
         <Link to={`/details/${pageId}`} onClick={() => setType(type)}>
           <img
-            src={`https://image.tmdb.org/t/p/w185/${poster}`}
+            src={
+              poster
+                ? `https://image.tmdb.org/t/p/w185/${poster}`
+                : require('../../../assets/placeholder.png')
+            }
             alt={name}
             className='list-item__img'
           />
-          <div className='list__item__name'>{name}</div>
+          <div className='list-item__name'>{name}</div>
         </Link>
-        )
       </div>
     )
   }
