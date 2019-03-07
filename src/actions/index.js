@@ -22,3 +22,12 @@ export {
   getQueryItemCredits,
   getQueryItemVideos
 } from './item'
+
+export {
+  createUser,
+  loginUserWithEmailPassword,
+  loginUserWithSocial,
+  fetchUser
+} from './auth'
+
+export { addToList, removeFromList } from './database'
