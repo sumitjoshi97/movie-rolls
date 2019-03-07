@@ -1,15 +1,28 @@
 .list {
   padding: 6rem 6rem 0 6rem;
-  background-color: #1a1a1a;
+  background-color: #121212;
   &__header {
     text-transform: capitalize;
     padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #535353;
   }
 }
 
 .list-item {
   display: inline-block;
   padding: 2rem;
+  line-height: 2.4rem;
+
+  & > a {
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   &__img {
     height: 18rem;
     background: #000;
@@ -17,12 +30,39 @@
   }
 
   &__video {
-    display: inline-block;
-    height: 18rem;
+    // height: 18rem;
+    // width: 20rem;
     outline: none;
     border: none;
+    margin-right: 2rem;
   }
 
   &__name {
+    padding-top: 1rem;
+    color: #fff;
+
+    &__sub {
+      color: #888888;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+//react-slick arrows
+
+.slick-prev {
+  top: -3.5rem !important;
+  right: 6rem !important;
+  left: auto !important;
+
+  &::before {
+    content: none !important;
+  }
+}
+.slick-next {
+  top: -3.5rem !important;
+  right: 0rem !important;
+  &::before {
+    content: none !important;
   }
 }
