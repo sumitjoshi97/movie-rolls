@@ -1,0 +1,117 @@
+.auth-form {
+  width: 46rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 2rem 0;
+  border-radius: 8px;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    padding-bottom: 1.4rem;
+    color: #ff0000;
+    font-weight: 700;
+
+    &__main {
+      font-size: 4rem;
+    }
+    &__sub {
+      font-size: 2rem;
+    }
+  }
+
+  &__header {
+    color: #333;
+    font-weight: 700;
+    width: 30rem;
+
+    & > h3 {
+      font-size: 3.3rem;
+      text-align: center;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+    &__input {
+      width: 100%;
+      font-size: 1.6rem;
+      padding: 1.4rem;
+      margin-bottom: 1.4rem;
+      border-radius: 4px;
+      border: 1px solid #979797;
+    }
+
+    &__submit {
+      background: #ff0000;
+    }
+  }
+
+  & > span {
+    color: #333;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+  }
+
+  &__social-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 38rem;
+
+    &__google {
+      background: #4285f4;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    &__facebook {
+      background: #3b5998;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__active {
+    background: none;
+    border: none;
+    color: #555555;
+    font-weight: 700;
+    padding-top: 1.4rem;
+    padding-bottom: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.action-btn {
+  font-size: 1.8rem;
+  width: 30rem;
+
+  padding: 1.4rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 1.4rem;
+}

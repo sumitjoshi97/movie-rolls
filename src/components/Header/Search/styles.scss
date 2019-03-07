@@ -1,0 +1,29 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  &__input {
+    width: 0;
+    font-size: 1.6rem;
+    color: #2a2a2a;
+    border: none;
+    border-radius: 100px;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+    }
+  }
+}
