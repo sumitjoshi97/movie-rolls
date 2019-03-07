@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import Star from './Star'
 
 import './styles.scss'
@@ -10,7 +11,7 @@ export default class RatingStars extends Component {
     let renderStars = []
 
     for (let i = 1; i <= 5; i++) {
-      if (i >= stars && i === Math.ceil(stars)) {
+      if (i > stars && i === Math.ceil(stars)) {
         renderStars.push(<Star key={i} type='half' />)
       } else if (i <= stars) {
         renderStars.push(<Star key={i} type='full' />)
