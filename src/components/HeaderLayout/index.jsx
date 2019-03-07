@@ -5,17 +5,31 @@ import Header from '../Header'
 import Footer from '../Footer'
 import Home from '../../views/Home'
 import ItemDetail from '../../views/ItemDetail'
-// import Profile from '../../views/Profile'
 import Discover from '../../views/Discover'
 
 export default class HeaderLayout extends Component {
+  state = {
+    color: 'transparent'
+  }
+
+  listenScrollEvent = e => {
+    if (window.scrollY > 100) {
+      this.setState({ color: '#212121' })
+    } else {
+      this.setState({ color: 'transparent' })
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
   render() {
     return (
       <>
-        <Header />
+        <Header color={this.state.color} />
         <Switch>
           <Route exact path='/details/:itemId' component={ItemDetail} />
-          {/* <Route exact path='/profile' component={Profile} /> */}
           <Route exact path='/discover' component={Discover} />
           <Route exact path='/' component={Home} />
           <Route render={() => <div>loading...</div>} />
