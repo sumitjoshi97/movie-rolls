@@ -4,6 +4,8 @@ import Slider from 'react-slick'
 import ListItem from './ListItem'
 import CastItem from './CastItem'
 import VideoItem from './VideoItem'
+import NextArrow from '../Arrows/Next'
+import PrevArrow from '../Arrows/Prev'
 
 import './styles.scss'
 
@@ -13,7 +15,9 @@ const sliderOptions = {
   speed: 400,
   slidesToShow: 8,
   swipeToSlide: true,
-  infinite: false
+  infinite: false,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
 }
 
 export default class List extends PureComponent {
