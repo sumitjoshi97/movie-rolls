@@ -55,6 +55,8 @@ class ItemDetail extends Component {
           summary={item.overview}
           adult={item.adult}
           year={item.release_date.split('-')[0]}
+          history={this.props.history}
+          location={this.props.location.pathname}
         />
       )
     }

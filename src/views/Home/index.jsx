@@ -75,6 +75,8 @@ class Home extends Component {
               summary={slide.data.overview}
               adult={slide.data.adult}
               year={slide.data.release_date.split('-')[0]}
+              history={this.props.history}
+              location='/'
             />
           )
         } else {
@@ -89,6 +91,8 @@ class Home extends Component {
               type={slide.type}
               summary={slide.data.overview}
               year={slide.data.first_air_date.split('-')[0]}
+              history={this.props.history}
+              location='/'
             />
           )
         }
