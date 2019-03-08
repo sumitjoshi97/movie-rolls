@@ -1,8 +1,8 @@
 import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
-  favorites: null,
-  watchLater: null
+  favorite: null,
+  watch: null
 }
 
 export default (state = initialState, action) => {
@@ -14,10 +14,10 @@ export default (state = initialState, action) => {
       return { ...state }
 
     case actionTypes.FETCH_FAVORITE_LIST_SUCCESS:
-      return { ...state, favorites: action.list }
+      return { ...state, favorite: action.list }
 
     case actionTypes.FETCH_WATCH_LATER_LIST_SUCCESS:
-      return { ...state, watchLater: action.list }
+      return { ...state, watch: action.list }
     default:
       return state
   }
