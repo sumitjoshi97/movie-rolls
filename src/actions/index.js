@@ -27,7 +27,8 @@ export {
   createUser,
   loginUserWithEmailPassword,
   loginUserWithSocial,
-  fetchUser
+  fetchUser,
+  setRedirectPath
 } from './auth'
 
-export { addToList, removeFromList } from './database'
+export { addToList, removeFromList, fetchList } from './database'
