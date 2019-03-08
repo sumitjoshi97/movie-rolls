@@ -24,6 +24,10 @@ export default class HeaderLayout extends Component {
     window.addEventListener('scroll', this.listenScrollEvent)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenScrollEvent)
+  }
+
   render() {
     return (
       <>
