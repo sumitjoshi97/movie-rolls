@@ -40,22 +40,31 @@ class AuthForm extends Component {
     if (active === 'login') {
       await loginUserWithEmail(email, password)
       await fetchUser()
-      await this.props.fetchList('favorite')
-      await this.props.fetchList('watch')
+
+      if (this.props.user) {
+        await this.props.fetchList('favorite', this.props.user.uid)
+        await this.props.fetchList('watch', this.props.user.uid)
+      }
     } else {
       await signupUser(email, password)
       await fetchUser()
-      await this.props.fetchList('favorite')
-      await this.props.fetchList('watch')
+      if (this.props.user) {
+        await this.props.fetchList('favorite', this.props.user.uid)
+        await this.props.fetchList('watch', this.props.user.uid)
+      }
     }
   }
 
   authWithSocial = async provider => {
-    await this.props.loginWithSocial(provider)
+    const { user } = this.props
+    await this.props.loginUserWithSocial(provider)
     await this.props.fetchUser()
-    await this.props.fetchList('favorite')
-    await this.props.fetchList('watch')
+    if (user) {
+      await this.props.fetchList('favorite', user.uid)
+      await this.props.fetchList('watch', user.uid)
+    }
   }
+
   render() {
     const { active } = this.state
     return (
@@ -100,13 +109,13 @@ class AuthForm extends Component {
         <div className='auth-form__social-btns'>
           <button
             className='auth-form__social-btns__google action-btn'
-            onClick={() => this.props.loginUserWithSocial('google')}
+            onClick={() => this.authWithSocial('google')}
           >
             Continue with Google
           </button>
           <button
             className='auth-form__social-btns__facebook action-btn'
-            onClick={() => this.props.loginUserWithSocial('facebook')}
+            onClick={() => this.authWithSocial('facebook')}
           >
             Continue with Facebook
           </button>
@@ -123,7 +132,7 @@ class AuthForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  auth: state.auth.user !== null
+  user: state.auth.user
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -137,7 +146,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(actions.loginUserWithSocial(provider)),
 
   fetchUser: () => dispatch(actions.fetchUser()),
-  fetchList: type => dispatch(actions.fetchList(type))
+  fetchList: (type, userId) => dispatch(actions.fetchList(type, userId))
 })
 
 export default connect(
