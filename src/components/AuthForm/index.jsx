@@ -40,12 +40,22 @@ class AuthForm extends Component {
     if (active === 'login') {
       await loginUserWithEmail(email, password)
       await fetchUser()
+      await this.props.fetchList('favorite')
+      await this.props.fetchList('watch')
     } else {
       await signupUser(email, password)
       await fetchUser()
+      await this.props.fetchList('favorite')
+      await this.props.fetchList('watch')
     }
   }
 
+  authWithSocial = async provider => {
+    await this.props.loginWithSocial(provider)
+    await this.props.fetchUser()
+    await this.props.fetchList('favorite')
+    await this.props.fetchList('watch')
+  }
   render() {
     const { active } = this.state
     return (
@@ -126,7 +136,8 @@ const mapDispatchToProps = dispatch => ({
   loginUserWithSocial: provider =>
     dispatch(actions.loginUserWithSocial(provider)),
 
-  fetchUser: () => dispatch(actions.fetchUser())
+  fetchUser: () => dispatch(actions.fetchUser()),
+  fetchList: type => dispatch(actions.fetchList(type))
 })
 
 export default connect(
