@@ -46,7 +46,9 @@ class Header extends Component {
             />
           </li>
 
-          <li className='header__left__browse'>browse</li>
+          <li className='header__left__browse'>
+            <Link to='/discover'>discover</Link>
+          </li>
         </ul>
         <ul className='header__right'>
           <li className='header__right__profile'>
