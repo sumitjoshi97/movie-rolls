@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { Redirect, withRouter } from 'react-router-dom'
 
 import RatingStars from '../RatingStars'
 
@@ -32,14 +31,23 @@ class Hero extends Component {
     itemId: ''
   }
 
-  isItemInList = (type, list) => {
+  componentDidMount() {
+    if (this.checkList('favorite')) {
+      console.log('checkFav')
+      this.setState({ isFavorite: true })
+    }
+    if (this.checkList('watch')) {
+      console.log('checkWatch')
+      this.setState({ isWatch: true })
+    }
+  }
+
+  isItemInList = list => {
     for (let item in list) {
+      console.log(item)
       if (item.pageId === this.props.pageId) {
-        if (type === 'favorite') {
-          this.setState({ isFavorite: true, itemId: item })
-        } else {
-          this.setState({ isWatch: true, itemId: item })
-        }
+        this.setState({ itemId: item })
+        console.log(item.pageId)
         return true
       }
     }
@@ -47,21 +55,35 @@ class Hero extends Component {
   }
 
   handleList = type => {
-    if (this.props.isAuth) {
-      const list = type === 'favorite' ? this.props.favorite : this.props.watch
-
-      if (this.isItemInList(type, list)) {
-        this.removeFromList(type)
+    if (this.props.user) {
+      if (type === 'favorite') {
+        this.handleFavoriteList(type)
       } else {
-        this.addToList(type)
+        this.handleWatchList(type)
       }
     } else {
-      // this.props.setRedirectPath(this.props.location.path)
       this.props.history.push('/profile/auth')
+      this.props.setRedirectPath(this.props.location)
     }
   }
 
-  addToList = type => {
+  handleFavoriteList = type => {
+    if (!this.state.isFavorite) {
+      this.addItemToList(type)
+    } else {
+      this.removeItemFromList(type)
+    }
+  }
+
+  handleWatchList = type => {
+    if (!this.state.isWatch) {
+      this.addItemToList(type)
+    } else {
+      this.removeItemFromList(type)
+    }
+  }
+
+  addItemToList = type => {
     const { pageId, title, poster, user, addToList } = this.props
 
     const data = {
@@ -70,12 +92,22 @@ class Hero extends Component {
       poster
     }
     addToList(type, data, user.uid)
+    this.handleListState(type)
   }
 
-  removeFromList = type => {
+  removeItemFromList = type => {
     const { user, removeFromList } = this.props
 
     removeFromList(type, this.state.itemId, user.uid)
+    this.handleListState(type)
+  }
+
+  handleListState = type => {
+    if (type === 'favorite') {
+      this.setState({ isFavorite: !this.state.isFavorite })
+    } else {
+      this.setState({ isWatch: !this.state.isWatch })
+    }
   }
 
   render() {
@@ -94,6 +126,19 @@ class Hero extends Component {
       backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${backdrop})`
     }
 
+    if (this.props.user) {
+      if (this.props.favorite) {
+        if (this.isInList(this.props.favorite)) {
+          this.setState({ isFavorite: true })
+        }
+      }
+      if (this.props.watch) {
+        if (this.isInList(this.props.watch)) {
+          this.setState({ isWatch: true })
+        }
+      }
+    }
+
     return (
       <div className='hero' style={heroBackdrop}>
         <div className='hero__info'>
@@ -104,10 +149,12 @@ class Hero extends Component {
           />
           <div className='hero__info__text'>
             <h1 className='hero__info__text__header'>{title}</h1>
+
             <div className='hero__info__text__rating'>
               {rating}
               <RatingStars stars={rating} />
             </div>
+
             <div className='hero__info__text__type'>
               <span>{type}</span>
 
@@ -125,13 +172,13 @@ class Hero extends Component {
             <div className='hero__info__text__action-btns'>
               <button
                 className='hero__info__text__action-btns__favorite'
-                onClick={this.handleList('favorite')}
+                onClick={() => this.handleList('favorite')}
               >
                 {this.state.isFavorite ? 'remove from' : 'add to '} favorite
               </button>
               <button
                 className='hero__info__text__action-btns__watch-later'
-                onClick={this.handleList('watch')}
+                onClick={() => this.handleList('watch')}
               >
                 {this.state.isWatch ? 'remove from' : 'add to '} Watch Later
               </button>
@@ -159,9 +206,7 @@ const mapDispatchToProps = dispatch => ({
   setRedirectPath: path => dispatch(actions.setRedirectPath(path))
 })
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Hero)
-)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Hero)
