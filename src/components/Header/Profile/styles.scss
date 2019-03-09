@@ -1,0 +1,15 @@
+.profile-btns {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &__favorite {
+    }
+
+    &__watch {
+    }
+
+    &__logout {
+    }
+  }
+}

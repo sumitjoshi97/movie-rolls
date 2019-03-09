@@ -21,7 +21,11 @@
     & > * {
       padding-right: 3rem;
     }
-
+    &__search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__brand {
       text-transform: uppercase;
       font-weight: 700;
