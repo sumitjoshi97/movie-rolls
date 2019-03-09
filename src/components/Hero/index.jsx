@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -8,7 +8,7 @@ import * as actions from '../../actions'
 
 import './styles.scss'
 
-class Hero extends Component {
+class Hero extends PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     poster: PropTypes.string,
@@ -31,23 +31,10 @@ class Hero extends Component {
     itemId: ''
   }
 
-  componentDidMount() {
-    if (this.checkList('favorite')) {
-      console.log('checkFav')
-      this.setState({ isFavorite: true })
-    }
-    if (this.checkList('watch')) {
-      console.log('checkWatch')
-      this.setState({ isWatch: true })
-    }
-  }
-
   isItemInList = list => {
     for (let item in list) {
-      console.log(item)
-      if (item.pageId === this.props.pageId) {
+      if (list[item].pageId === this.props.pageId) {
         this.setState({ itemId: item })
-        console.log(item.pageId)
         return true
       }
     }
@@ -128,12 +115,12 @@ class Hero extends Component {
 
     if (this.props.user) {
       if (this.props.favorite) {
-        if (this.isInList(this.props.favorite)) {
+        if (this.isItemInList(this.props.favorite)) {
           this.setState({ isFavorite: true })
         }
       }
       if (this.props.watch) {
-        if (this.isInList(this.props.watch)) {
+        if (this.isItemInList(this.props.watch)) {
           this.setState({ isWatch: true })
         }
       }
