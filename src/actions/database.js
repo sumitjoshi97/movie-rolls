@@ -5,31 +5,23 @@ import { databaseRef } from '../config/firebase'
 
 ////////////////////////////////////////////////////////////////////
 //add item to list - favorites / watch later
-export const addToListSuccess = () => ({
-  type: actionTypes.ADD_TO_LIST_SUCCESS
-})
 
 export const addToList = (list, data, userId) => dispatch => {
   return databaseRef
     .child(list)
     .child(userId)
     .push(data)
-    .then(res => dispatch(addToListSuccess))
     .catch(err => setError())
 }
 
 ////////////////////////////////////////////////////////////////////
 //remove item from list - favorites / watch later
-export const removeFromListSuccess = () => ({
-  type: actionTypes.REMOVE_FROM_LIST_SUCCESS
-})
 
 export const removeFromList = (list, itemId, userId) => dispatch => {
   return databaseRef
     .child(list)
     .child(userId)
     .remove(itemId)
-    .then(res => dispatch(removeFromListSuccess()))
     .catch(err => setError())
 }
 
