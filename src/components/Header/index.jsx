@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Search from './Search'
+import Profile from './Profile'
 
 import './styles.scss'
 
@@ -29,10 +30,7 @@ class Header extends Component {
   }
 
   render() {
-    let isAuth = false
-    if (this.props.user) {
-      isAuth = this.props.user !== null
-    }
+    const isAuth = this.props.user !== null
 
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
@@ -52,7 +50,7 @@ class Header extends Component {
         </ul>
         <ul className='header__right'>
           <li className='header__right__profile'>
-            {isAuth ? null : <Link to='/profile/auth'>Login</Link>}
+            <Profile isAuth={isAuth} />
           </li>
         </ul>
       </div>
