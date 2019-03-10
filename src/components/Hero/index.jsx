@@ -17,7 +17,7 @@ class Hero extends PureComponent {
     summary: PropTypes.string,
     adult: PropTypes.bool,
     year: PropTypes.string,
-    user: PropTypes.object,
+    userId: PropTypes.string,
     favorite: PropTypes.object,
     watch: PropTypes.object,
     addToList: PropTypes.func,
@@ -28,21 +28,38 @@ class Hero extends PureComponent {
   state = {
     isFavorite: false,
     isWatch: false,
-    itemId: ''
+    favoriteId: '',
+    watchId: ''
+  }
+
+  componentDidUpdate = () => {
+    if (this.props.userId) {
+      if (this.props.favorite) {
+        const favoriteId = this.isItemInList(this.props.favorite)
+        if (favoriteId) {
+          this.setState({ isFavorite: true, favoriteId })
+        }
+      }
+
+      if (this.props.watch) {
+        const watchId = this.isItemInList(this.props.watch)
+        if (watchId) {
+          this.setState({ isWatch: true, watchId })
+        }
+      }
+    }
   }
 
   isItemInList = list => {
     for (let item in list) {
       if (list[item].pageId === this.props.pageId) {
-        this.setState({ itemId: item })
-        return true
+        return item
       }
     }
-    return false
   }
 
   handleList = type => {
-    if (this.props.user) {
+    if (this.props.userId) {
       if (type === 'favorite') {
         this.handleFavoriteList(type)
       } else {
@@ -58,7 +75,8 @@ class Hero extends PureComponent {
     if (!this.state.isFavorite) {
       this.addItemToList(type)
     } else {
-      this.removeItemFromList(type)
+      this.removeItemFromList(type, this.state.favoriteId)
+      this.setState({ favoriteId: '' })
     }
   }
 
@@ -66,26 +84,27 @@ class Hero extends PureComponent {
     if (!this.state.isWatch) {
       this.addItemToList(type)
     } else {
-      this.removeItemFromList(type)
+      this.removeItemFromList(type, this.state.watchId)
+      this.setState({ watchId: '' })
     }
   }
 
   addItemToList = type => {
-    const { pageId, title, poster, user, addToList } = this.props
+    const { pageId, title, poster, addToList } = this.props
 
     const data = {
       pageId,
       title,
       poster
     }
-    addToList(type, data, user.uid)
+    addToList(type, data, this.props.userId)
     this.handleListState(type)
   }
 
   removeItemFromList = type => {
-    const { user, removeFromList } = this.props
+    const { removeFromList } = this.props
 
-    removeFromList(type, this.state.itemId, user.uid)
+    removeFromList(type, this.state.itemId, this.props.userId)
     this.handleListState(type)
   }
 
@@ -111,19 +130,6 @@ class Hero extends PureComponent {
 
     const heroBackdrop = {
       backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url(https://image.tmdb.org/t/p/original/${backdrop})`
-    }
-
-    if (this.props.user) {
-      if (this.props.favorite) {
-        if (this.isItemInList(this.props.favorite)) {
-          this.setState({ isFavorite: true })
-        }
-      }
-      if (this.props.watch) {
-        if (this.isItemInList(this.props.watch)) {
-          this.setState({ isWatch: true })
-        }
-      }
     }
 
     return (
@@ -178,17 +184,17 @@ class Hero extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  user: state.auth.user,
+  userId: state.auth.userId,
   favorite: state.database.favorite,
   watch: state.database.watch
 })
 
 const mapDispatchToProps = dispatch => ({
-  addToList: (list, data, userId) =>
-    dispatch(actions.addToList(list, data, userId)),
+  addToList: (list, data, userIdId) =>
+    dispatch(actions.addToList(list, data, userIdId)),
 
-  removeFromList: (list, itemId, userId) =>
-    dispatch(actions.removeFromList(list, itemId, userId)),
+  removeFromList: (list, itemId, userIdId) =>
+    dispatch(actions.removeFromList(list, itemId, userIdId)),
 
   setRedirectPath: path => dispatch(actions.setRedirectPath(path))
 })
