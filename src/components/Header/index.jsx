@@ -35,7 +35,9 @@ class Header extends Component {
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
         <ul className='header__left'>
-          <li className='header__left__brand'>Movie Rolls</li>
+          <li className='header__left__brand'>
+            <Link to='/'>Movie Rolls</Link>
+          </li>
 
           <li className='header__left__search'>
             <Search
