@@ -21,7 +21,8 @@ export const removeFromList = (list, itemId, userId) => dispatch => {
   return databaseRef
     .child(list)
     .child(userId)
-    .remove(itemId)
+    .child(itemId)
+    .remove()
     .catch(err => setError())
 }
 
