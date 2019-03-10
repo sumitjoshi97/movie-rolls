@@ -13,9 +13,9 @@ class App extends Component {
   }
 
   fetchLists = () => {
-    if (this.props.user) {
-      this.props.fetchList('watch', this.props.user.uid)
-      this.props.fetchList('favorite', this.props.user.uid)
+    if (this.props.userId) {
+      this.props.fetchList('watch', this.props.userId)
+      this.props.fetchList('favorite', this.props.userId)
     }
   }
 
@@ -35,7 +35,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.auth.user
+  userId: state.auth.userId
 })
 
 const mapDispatchToProps = dispatch => ({
