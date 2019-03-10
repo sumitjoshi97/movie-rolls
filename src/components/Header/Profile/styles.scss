@@ -1,7 +1,40 @@
-.profile-btns {
+.profile-btn {
+  position: absolute;
+  right: 4rem;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10rem;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 8rem;
+    right: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    & > * {
+      font-size: 1.4rem;
+      padding: 1rem 2rem;
+      background: #353535;
+      color: #fff;
+      border: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
 
     &__favorite {
     }
@@ -10,6 +43,8 @@
     }
 
     &__logout {
+      border-bottom: none;
+      background: #212121;
     }
   }
 }
