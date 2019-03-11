@@ -25,7 +25,7 @@ class App extends Component {
         {this.fetchLists()}
         <Router>
           <Switch>
-            <Route path='/profile' component={Layout} />
+            <Route path='/auth' component={Layout} />
             <Route path='/' component={HeaderLayout} />
           </Switch>
         </Router>
