@@ -32,7 +32,15 @@ class Hero extends PureComponent {
     watchId: ''
   }
 
+  componentDidMount = () => {
+    this.checkList()
+  }
+
   componentDidUpdate = () => {
+    this.checkList()
+  }
+
+  checkList = () => {
     if (this.props.userId) {
       if (this.props.favorite) {
         const favoriteId = this.isItemInList(this.props.favorite)
@@ -89,23 +97,24 @@ class Hero extends PureComponent {
     }
   }
 
-  addItemToList = type => {
-    const { pageId, title, poster, addToList } = this.props
+  addItemToList = listType => {
+    const { pageId, title, poster, type, addToList } = this.props
 
     const data = {
       pageId,
       title,
+      type,
       poster
     }
-    addToList(type, data, this.props.userId)
-    this.handleListState(type)
+    addToList(listType, data, this.props.userId)
+    this.handleListState(listType)
   }
 
-  removeItemFromList = type => {
+  removeItemFromList = (listType, itemId) => {
     const { removeFromList } = this.props
 
-    removeFromList(type, this.state.itemId, this.props.userId)
-    this.handleListState(type)
+    removeFromList(listType, itemId, this.props.userId)
+    this.handleListState(listType)
   }
 
   handleListState = type => {
