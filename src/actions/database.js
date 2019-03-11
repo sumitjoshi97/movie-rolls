@@ -6,9 +6,9 @@ import { databaseRef } from '../config/firebase'
 ////////////////////////////////////////////////////////////////////
 //add item to list - favorites / watch later
 
-export const addToList = (list, data, userId) => dispatch => {
+export const addToList = (listType, data, userId) => dispatch => {
   return databaseRef
-    .child(list)
+    .child(listType)
     .child(userId)
     .push(data)
     .catch(err => setError())
@@ -17,9 +17,9 @@ export const addToList = (list, data, userId) => dispatch => {
 ////////////////////////////////////////////////////////////////////
 //remove item from list - favorites / watch later
 
-export const removeFromList = (list, itemId, userId) => dispatch => {
+export const removeFromList = (listType, itemId, userId) => dispatch => {
   return databaseRef
-    .child(list)
+    .child(listType)
     .child(userId)
     .child(itemId)
     .remove()
