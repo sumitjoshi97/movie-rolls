@@ -7,7 +7,7 @@ export default class Layout extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/profile/auth' component={Auth} />
+        <Route exact path='/auth' component={Auth} />
       </Switch>
     )
   }
