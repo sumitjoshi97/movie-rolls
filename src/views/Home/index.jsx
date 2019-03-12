@@ -57,8 +57,8 @@ class Home extends Component {
       renderData.push(
         { data: currentMovies.results[0], type: 'movie' },
         { data: currentMovies.results[1], type: 'movie' },
-        { data: currentShows.results[0], type: 'show' },
-        { data: currentShows.results[1], type: 'show' }
+        { data: currentShows.results[0], type: 'tv' },
+        { data: currentShows.results[1], type: 'tv' }
       )
 
       return renderData.map(slide => {
