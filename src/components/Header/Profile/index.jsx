@@ -26,12 +26,16 @@ const Header = ({ isAuth, profileURL }) => {
           </button>
           {hidden ? null : (
             <div className='profile-btn__list'>
-              <button className='profile-btn__list__favorite'>
-                <Link to='/profile/favorites'>Favorite</Link>
-              </button>
-              <button className='profile-btn__list__watch'>
-                <Link to='profile/watch-later'>watch later</Link>
-              </button>
+              <Link to='/profile/favorites'>
+                <button className='profile-btn__list__favorite'>
+                  Favorite
+                </button>
+              </Link>
+              <Link to='/profile/watch-later'>
+                <button className='profile-btn__list__watch'>
+                  watch later
+                </button>
+              </Link>
               <button className='profile-btn__list__logout'>logout</button>
             </div>
           )}
