@@ -1,0 +1,27 @@
+.user-list {
+  &__action-btns {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 4rem;
+
+    & > * {
+      padding: 2rem 3rem;
+      background: #212121;
+      color: #d8d8d8;
+      border: none;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 4rem;
+      cursor: pointer;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}

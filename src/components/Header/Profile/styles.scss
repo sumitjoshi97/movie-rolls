@@ -26,20 +26,22 @@
     right: 4rem;
     border: 1px solid rgba(255, 255, 255, 0.5);
 
-    & > * {
+    &__favorite,
+    &__watch,
+    &__logout {
       font-size: 1.4rem;
       padding: 1rem 2rem;
+      width: 100%;
       background: #353535;
       color: #fff;
       border: none;
       text-transform: uppercase;
       cursor: pointer;
-    }
 
-    &__favorite {
-    }
-
-    &__watch {
+      &:focus,
+      &:active {
+        outline: none;
+      }
     }
 
     &__logout {
