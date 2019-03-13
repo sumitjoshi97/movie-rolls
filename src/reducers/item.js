@@ -12,6 +12,9 @@ export default (state = initialState, action) => {
     case actionTypes.SET_ITEM_TYPE:
       return { ...state, type: action.itemType }
 
+    case actionTypes.SET_ITEM_CLEAR:
+      return { ...state, current: null, credits: null, videos: null }
+
     case actionTypes.SET_QUERY_ITEM:
       return { ...state, current: action.item }
 
