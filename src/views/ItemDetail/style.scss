@@ -1,0 +1,12 @@
+.item-details {
+  &__hero {
+    position: relative;
+  }
+
+  &__lists {
+    position: relative;
+    &:last-child {
+      padding-bottom: 8rem;
+    }
+  }
+}

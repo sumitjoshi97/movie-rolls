@@ -1,4 +1,7 @@
 .user-list {
+  display: flex;
+  flex-direction: column;
+
   &__action-btns {
     position: absolute;
     top: 10rem;
@@ -23,5 +26,9 @@
         outline: none;
       }
     }
+  }
+
+  &__items {
+    padding-top: 20rem;
   }
 }

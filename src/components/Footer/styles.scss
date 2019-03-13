@@ -1,7 +1,48 @@
 .footer {
-  position: relative;
-  bottom: 0;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   background: #212121;
   padding: 6rem 8rem;
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__name {
+      color: #ff0000;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    &__author {
+      &__name {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+        font-weight: 700;
+
+        span {
+          font-size: 1.5rem;
+          text-transform: lowercase;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+        }
+      }
+      &__social {
+        &__portfolio {
+          margin-right: 4rem;
+        }
+      }
+    }
+  }
+
+  &__support {
+    &__img {
+      height: 10rem;
+    }
+  }
 }

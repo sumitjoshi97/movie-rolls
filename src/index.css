@@ -34,3 +34,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #121212;
 }
+
+.app {
+  position: relative;
+}

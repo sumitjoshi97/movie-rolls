@@ -15,3 +15,19 @@
     content: "" !important;
   }
 }
+
+.home {
+  position: relative;
+
+  &__hero {
+    position: relative;
+  }
+
+  &__lists {
+    position: relative;
+
+    &:last-child {
+      padding-bottom: 8rem;
+    }
+  }
+}
