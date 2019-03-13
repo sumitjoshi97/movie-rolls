@@ -18,6 +18,7 @@ export {
 
 export {
   setItemType,
+  setItemClear,
   getQueryItem,
   getQueryItemCredits,
   getQueryItemVideos
