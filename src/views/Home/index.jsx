@@ -145,9 +145,13 @@ class Home extends Component {
     return (
       <div className='home'>
         <Header />
-        <Slider {...sliderOptions}>{this.renderHero()}</Slider>
-        <Nav options={['movies', 'tv shows']} />
-        {this.renderLists()}
+
+        <div className='home__hero'>
+          <Slider {...sliderOptions}>{this.renderHero()}</Slider>
+          <Nav options={['movies', 'tv shows']} />
+        </div>
+
+        <div className='home__lists'>{this.renderLists()}</div>
       </div>
     )
   }
