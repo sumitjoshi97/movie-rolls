@@ -32,6 +32,7 @@ export default class UserList extends Component {
         pageId={item.pageId}
         name={item.title}
         poster={item.poster}
+        type={item.type}
       />
     ))
   }
