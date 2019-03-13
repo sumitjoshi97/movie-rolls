@@ -10,6 +10,8 @@ import List from '../../components/List'
 //import redux actions
 import * as actions from '../../actions'
 
+import './style.scss'
+
 class ItemDetail extends Component {
   static propTypes = {
     type: PropTypes.string,
@@ -33,32 +35,48 @@ class ItemDetail extends Component {
     )
   }
 
-  fetchVideos = () => {
-    const { item, type, fetchQueryItemVideos } = this.props
-    if (item.video) {
-      fetchQueryItemVideos(type, this.props.match.params.itemId)
-    }
+  componentWillUnmount() {
+    this.props.setItemClear()
   }
 
   renderHero = () => {
     const { item, type } = this.props
+
     if (item) {
-      return (
-        <Hero
-          key={item.id}
-          pageId={item.id}
-          title={item.title}
-          poster={item.poster_path}
-          backdrop={item.backdrop_path}
-          rating={item.vote_average}
-          type={type}
-          summary={item.overview}
-          adult={item.adult}
-          year={item.release_date.split('-')[0]}
-          history={this.props.history}
-          location={this.props.location.pathname}
-        />
-      )
+      if (type === 'movie') {
+        return (
+          <Hero
+            key={item.id}
+            pageId={item.id}
+            title={item.title}
+            poster={item.poster_path}
+            backdrop={item.backdrop_path}
+            rating={item.vote_average}
+            type={type}
+            summary={item.overview}
+            adult={item.adult}
+            year={item.release_date.split('-')[0]}
+            history={this.props.history}
+            location={this.props.location.pathname}
+          />
+        )
+      } else {
+        return (
+          <Hero
+            key={item.id}
+            pageId={item.id}
+            title={item.name}
+            poster={item.poster_path}
+            backdrop={item.backdrop_path}
+            rating={item.vote_average}
+            type={type}
+            summary={item.overview}
+            year={item.first_air_date.split('-')[0]}
+            history={this.props.history}
+            location={this.props.location.pathname}
+          />
+        )
+      }
     }
   }
 
@@ -82,9 +100,11 @@ class ItemDetail extends Component {
   render() {
     return (
       <div className='item-details'>
-        {this.renderHero()}
-        <Nav options={['overview', 'similar']} />
-        {this.renderLists()}
+        <div className='item-details__hero'>
+          {this.renderHero()}
+          <Nav options={['overview', 'similar']} />
+        </div>
+        <div className='item-details__lists'>{this.renderLists()}</div>
       </div>
     )
   }
@@ -105,7 +125,9 @@ const mapDispatchToProps = dispatch => ({
     dispatch(actions.getQueryItemCredits(type, itemId)),
 
   fetchQueryItemVideos: (type, itemId) =>
-    dispatch(actions.getQueryItemVideos(type, itemId))
+    dispatch(actions.getQueryItemVideos(type, itemId)),
+
+  setItemClear: () => dispatch(actions.setItemClear())
 })
 
 export default connect(
