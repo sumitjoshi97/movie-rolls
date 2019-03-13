@@ -8,6 +8,12 @@ export const setItemType = itemType => ({
   itemType
 })
 
+///////////////////////////////////////////////////////////
+//clear item
+export const setItemClear = () => ({
+  type: actionTypes.SET_ITEM_CLEAR
+})
+
 //////////////////////////////////////////////////////////////
 // set base item - tv/show - details
 export const setQueryItem = item => ({
