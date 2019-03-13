@@ -16,7 +16,7 @@ export default class VideoItem extends PureComponent {
         <iframe
           className='list-item__video'
           title='1'
-          width='180'
+          width='280'
           src={`https://www.youtube.com/embed/${video}`}
         />
         <div className='list-item__name'>{name}</div>
