@@ -9,17 +9,6 @@ import PrevArrow from '../Arrows/Prev'
 
 import './styles.scss'
 
-const sliderOptions = {
-  arrows: true,
-  dots: false,
-  speed: 400,
-  slidesToShow: 8,
-  swipeToSlide: true,
-  infinite: false,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />
-}
-
 export default class List extends PureComponent {
   renderList = () => {
     const { type, items } = this.props
@@ -61,6 +50,16 @@ export default class List extends PureComponent {
   }
 
   render() {
+    const sliderOptions = {
+      arrows: true,
+      dots: false,
+      speed: 400,
+      slidesToShow: this.props.type === 'video' ? 4 : 7,
+      swipeToSlide: true,
+      infinite: false,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
+    }
     const { name } = this.props
     return (
       <div className='list'>
