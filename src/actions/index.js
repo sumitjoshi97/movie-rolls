@@ -33,3 +33,6 @@ export {
 } from './auth'
 
 export { addToList, removeFromList, fetchList } from './database'
+
+export { getSearchResults } from './search'
+
