@@ -70,3 +70,23 @@ export const getQueryItemVideos = (itemType, itemId) => dispatch => {
     .then(res => dispatch(setQueryItemVideos(res.data)))
     .catch(err => setError())
 }
+
+////////////////////////////////////////////////////////////////////
+//set similar items - tv /movies
+
+export const setSimilarItems = items => ({
+  type: actionTypes.SET_SIMILAR_ITEMS,
+  items
+})
+
+// get simimar items - movie / tv shows
+export const getSimilarItems = (itemType, itemId) => async dispatch => {
+  return axios
+    .get(
+      `/${itemType}/${itemId}/similar?api_key=${
+        process.env.REACT_APP_TMDB_API
+      }&language=en-US&page=1`
+    )
+    .then(res => dispatch(setSimilarItems(res.data)))
+    .catch(err => dispatch(setError()))
+}
