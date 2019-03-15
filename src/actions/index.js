@@ -4,16 +4,14 @@ export {
   getCurrentMovies,
   getPopularMovies,
   getTopMovies,
-  getUpcomingMovies,
-  getSimilarMovies
+  getUpcomingMovies
 } from './movies'
 
 export {
   getCurrentShows,
   getAiringTodayShows,
   getPopularShows,
-  getTopShows,
-  getSimilarShows
+  getTopShows
 } from './shows'
 
 export {
@@ -21,7 +19,8 @@ export {
   setItemClear,
   getQueryItem,
   getQueryItemCredits,
-  getQueryItemVideos
+  getQueryItemVideos,
+  getSimilarItems
 } from './item'
 
 export {
@@ -36,3 +35,4 @@ export { addToList, removeFromList, fetchList } from './database'
 
 export { getSearchResults } from './search'
 
+export { getDiscoverMovieResults, getDiscoverShowResults } from './discover'
