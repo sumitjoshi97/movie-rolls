@@ -30,6 +30,7 @@ export const createUser = (email, password) => dispatch => {
 
 /////////////////////////////////////////////////////////////
 // login user with email password
+
 export const loginUserWithEmailPassword = (email, password) => dispatch => {
   return authRef
     .signInWithEmailAndPassword(email, password)
@@ -48,6 +49,7 @@ export const loginUserWithSocial = provider => dispatch => {
 
 //////////////////////////////////////////////////////////////
 // set redirect path
+
 export const setRedirectPath = path => ({
   type: actionTypes.SET_REDIRECT_PATH,
   path

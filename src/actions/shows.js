@@ -2,6 +2,7 @@ import * as actionTypes from './actionTypes'
 import { setError } from './index'
 import axios from '../axios-orders'
 
+//////////////////////////////////////////////////////////////////////
 export const setCurrentShows = shows => ({
   type: actionTypes.SET_CURRENT_SHOWS,
   shows
@@ -18,6 +19,7 @@ export const getCurrentShows = () => async dispatch => {
     .catch(err => dispatch(setError()))
 }
 
+/////////////////////////////////////////////////////////////////////
 export const setPopularShows = shows => ({
   type: actionTypes.SET_POPULAR_SHOWS,
   shows
@@ -34,6 +36,7 @@ export const getPopularShows = () => async dispatch => {
     .catch(err => dispatch(setError()))
 }
 
+////////////////////////////////////////////////////////////////////
 export const setAiringTodayShows = shows => ({
   type: actionTypes.SET_AIRING_TODAY_SHOWS,
   shows
@@ -50,6 +53,7 @@ export const getAiringTodayShows = () => async dispatch => {
     .catch(err => dispatch(setError()))
 }
 
+////////////////////////////////////////////////////////////////////
 export const setTopShows = shows => ({
   type: actionTypes.SET_TOP_SHOWS,
   shows
@@ -63,21 +67,5 @@ export const getTopShows = () => async dispatch => {
       }&language=en-US&page=1`
     )
     .then(res => dispatch(setTopShows(res.data)))
-    .catch(err => dispatch(setError()))
-}
-
-export const setSimilarShows = shows => ({
-  type: actionTypes.SET_SIMILAR_SHOWS,
-  shows
-})
-
-export const getSimilarShows = showId => async dispatch => {
-  return axios
-    .get(
-      `/tv/${showId}/similar?api_key=${
-        process.env.REACT_APP_TMDB_API
-      }&language=en-US&page=1`
-    )
-    .then(res => dispatch(setSimilarShows(res.data)))
     .catch(err => dispatch(setError()))
 }
