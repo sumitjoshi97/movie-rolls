@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Search from './Search'
@@ -20,8 +20,8 @@ class Header extends Component {
   }
 
   handleSearch = () => {
-    if (this.state.search) {
-      //api call to search
+    if (this.state.search && this.state.text) {
+      this.props.history.push(`/search-results/${this.state.text}`)
       this.setState({ text: '' })
     }
     this.setState(prevState => ({
@@ -30,8 +30,7 @@ class Header extends Component {
   }
 
   render() {
-    const isAuth = this.props.user !== null
-
+    const isAuth = this.props.userId !== undefined
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
         <ul className='header__left'>
@@ -63,12 +62,7 @@ class Header extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.auth.user
+  userId: state.auth.userId
 })
 
-const mapDispatchToProps = dispatch => ({})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header)
+export default connect(mapStateToProps)(withRouter(Header))
