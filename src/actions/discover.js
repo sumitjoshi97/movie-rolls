@@ -9,14 +9,19 @@ export const setDiscoverMovieResults = movies => ({
   movies
 })
 
-export const getDiscoverMovieResults = query => dispatch => {
+export const getDiscoverMovieResults = ({
+  year,
+  ratings,
+  sortBy,
+  orderBy
+}) => dispatch => {
   return axios
     .get(
       `https://api.themoviedb.org/3/discover/movie?language=en-US&include_adult=false&include_video=false&page=1
-      &primary_release_year=${query.year}
-      &vote_average.gte=${query.rating.min}
-      &vote_average.lte=${query.rating.max}
-      &sort_by=popularity.desc
+      &primary_release_year=${year}
+      &vote_average.gte=${ratings.min}
+      &vote_average.lte=${ratings.max}
+      &sort_by=${sortBy}.${orderBy}
       &api_key=${process.env.REACT_APP_TMDB_API}`
     )
     .then(res => dispatch(setDiscoverMovieResults(res.data)))
@@ -31,12 +36,21 @@ export const setDiscoverShowResults = shows => ({
   shows
 })
 
-export const getDiscoverShowResults = query => dispatch => {
+export const getDiscoverShowResults = ({
+  year,
+  ratings,
+  sortBy,
+  orderBy
+}) => dispatch => {
+  console.log(sortBy, orderBy)
   return axios
     .get(
-      `/discover/tv?language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&api_key=${
-        process.env.REACT_APP_TMDB_API
-      }`
+      `/discover/tv?language=en-US&page=1&include_null_first_air_dates=false
+        &first_air_date_year=${year}
+        &vote_average.gte=${ratings.min}
+        &bote_average.gte=${ratings.max}
+        &sort_by=${sortBy}.${orderBy}
+        &api_key=${process.env.REACT_APP_TMDB_API}`
     )
     .then(res => dispatch(setDiscoverShowResults(res.data)))
     .catch(err => setError())
