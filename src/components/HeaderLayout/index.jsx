@@ -8,6 +8,7 @@ import ItemDetail from '../../views/ItemDetail'
 import Discover from '../../views/Discover'
 import Favorites from '../../views/Favorites'
 import WatchLaters from '../../views/WatchLaters'
+import SearchResults from '../../views/SearchResults'
 
 export default class HeaderLayout extends Component {
   state = {
@@ -35,11 +36,15 @@ export default class HeaderLayout extends Component {
       <>
         <Header color={this.state.color} />
         <Switch>
-          <Route exact path='/details/:itemId' component={ItemDetail} />
-          <Route exact path='/discover' component={Discover} />
+          <Route
+            path='/search-results/:searchQuery'
+            component={SearchResults}
+          />
+          <Route path='/details/:itemId' component={ItemDetail} />
+          <Route path='/discover' component={Discover} />
           <Route path='/profile/favorites' component={Favorites} />
           <Route path='/profile/watch-later' component={WatchLaters} />
-          <Route exact path='/' component={Home} />
+          <Route path='/' component={Home} />
           <Route render={() => <div>loading...</div>} />
         </Switch>
         <Footer />
