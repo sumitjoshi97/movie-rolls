@@ -37,15 +37,13 @@ class Home extends Component {
     this.props.fetchCurrentMovies()
     this.props.fetchCurrentShows()
 
-    if (this.state.currentType === 'movie') {
-      this.props.fetchPopularMovies()
-      this.props.fetchUpcomingMovies()
-      this.props.fetchTopMovies()
-    } else {
-      this.props.fetchPopularShows()
-      this.props.fetchAiringShows()
-      this.props.fetchTopShows()
-    }
+    this.props.fetchPopularMovies()
+    this.props.fetchUpcomingMovies()
+    this.props.fetchTopMovies()
+
+    this.props.fetchPopularShows()
+    this.props.fetchAiringShows()
+    this.props.fetchTopShows()
   }
 
   renderHero = () => {
@@ -102,6 +100,12 @@ class Home extends Component {
     return renderData
   }
 
+  handleNav = itemType => {
+    this.setState({
+      currentType: itemType
+    })
+  }
+
   renderLists = () => {
     if (this.state.currentType === 'movie') {
       const {
@@ -131,9 +135,9 @@ class Home extends Component {
       if (currentShows && popularShows && topShows && airingShows) {
         return (
           <>
-            <List type='tv' name='airing now' items={currentShows.results} />
+            <List type='tv' name='airing today' items={airingShows.results} />
             <List type='tv' name='popular' items={popularShows.results} />
-            <List type='tv' name='airing' items={airingShows.results} />
+            <List type='tv' name='on TV' items={currentShows.results} />
             <List type='tv' name='top rated' items={topShows.results} />
           </>
         )
@@ -148,7 +152,13 @@ class Home extends Component {
 
         <div className='home__hero'>
           <Slider {...sliderOptions}>{this.renderHero()}</Slider>
-          <Nav options={['movies', 'tv shows']} />
+          <Nav
+            handleNav={this.handleNav}
+            options={[
+              { name: 'movies', type: 'movie' },
+              { name: 'tv shows', type: 'tv' }
+            ]}
+          />
         </div>
 
         <div className='home__lists'>{this.renderLists()}</div>
