@@ -23,7 +23,24 @@ class ItemDetail extends Component {
     fetchQueryItemVideos: PropTypes.func.isRequired
   }
 
+  state = {
+    currentType: 'overview'
+  }
+
   componentDidMount() {
+    this.fetchItem()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params.itemId !== this.props.match.params.itemId) {
+      this.fetchItem()
+    }
+  }
+  componentWillUnmount() {
+    this.props.setItemClear()
+  }
+
+  fetchItem = () => {
     this.props.fetchQueryItem(this.props.type, this.props.match.params.itemId)
     this.props.fetchQueryItemDetails(
       this.props.type,
@@ -33,12 +50,11 @@ class ItemDetail extends Component {
       this.props.type,
       this.props.match.params.itemId
     )
+    this.props.fetchSimilarItems(
+      this.props.type,
+      this.props.match.params.itemId
+    )
   }
-
-  componentWillUnmount() {
-    this.props.setItemClear()
-  }
-
   renderHero = () => {
     const { item, type } = this.props
 
@@ -81,20 +97,36 @@ class ItemDetail extends Component {
   }
 
   renderLists = () => {
-    if (this.props.credits) {
+    if (this.state.currentType === 'overview') {
+      if (this.props.credits) {
+        return (
+          <>
+            <List type='cast' name='Cast' items={this.props.credits.cast} />
+            {this.props.videos ? (
+              <List
+                type='video'
+                name='videos'
+                items={this.props.videos.results}
+              />
+            ) : null}
+          </>
+        )
+      }
+    } else {
       return (
-        <>
-          <List type='cast' name='Cast' items={this.props.credits.cast} />
-          {this.props.videos ? (
-            <List
-              type='video'
-              name='videos'
-              items={this.props.videos.results}
-            />
-          ) : null}
-        </>
+        <List
+          type={this.props.type}
+          name='Similar'
+          items={this.props.similar.results}
+        />
       )
     }
+  }
+
+  handleNav = itemType => {
+    this.setState({
+      currentType: itemType
+    })
   }
 
   render() {
@@ -102,7 +134,13 @@ class ItemDetail extends Component {
       <div className='item-details'>
         <div className='item-details__hero'>
           {this.renderHero()}
-          <Nav options={['overview', 'similar']} />
+          <Nav
+            handleNav={this.handleNav}
+            options={[
+              { type: 'overview', name: 'overview' },
+              { type: 'similar', name: 'more like this' }
+            ]}
+          />
         </div>
         <div className='item-details__lists'>{this.renderLists()}</div>
       </div>
@@ -114,7 +152,8 @@ const mapStateToProps = state => ({
   type: state.item.type,
   item: state.item.current,
   credits: state.item.credits,
-  videos: state.item.videos
+  videos: state.item.videos,
+  similar: state.item.similar
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -126,6 +165,9 @@ const mapDispatchToProps = dispatch => ({
 
   fetchQueryItemVideos: (type, itemId) =>
     dispatch(actions.getQueryItemVideos(type, itemId)),
+
+  fetchSimilarItems: (type, itemId) =>
+    dispatch(actions.getSimilarItems(type, itemId)),
 
   setItemClear: () => dispatch(actions.setItemClear())
 })
