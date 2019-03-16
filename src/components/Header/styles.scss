@@ -4,7 +4,7 @@
   justify-content: space-between;
   line-height: 3rem;
   vertical-align: middle;
-  padding: 3rem 4rem;
+  padding: 3rem 8rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -34,6 +34,16 @@
         font-size: 2rem;
         letter-spacing: 2px;
         color: #ff0000;
+      }
+    }
+
+    &__browse {
+      a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #fff;
+        letter-spacing: 1px;
+        // font-weight: 400;
       }
     }
   }

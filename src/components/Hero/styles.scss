@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   height: 100vh;
-  line-height: 3.4rem;
+  line-height: 3rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -10,7 +10,7 @@
 
   &__info {
     position: relative;
-    padding: 0 5rem;
+    padding: 0 8rem;
     display: flex;
     flex-direction: row;
     &__img {
@@ -20,7 +20,7 @@
     }
     &__text {
       padding-left: 2rem;
-      width: 56rem;
+      width: 70rem;
       position: relative;
 
       &__header {
@@ -60,6 +60,7 @@
         color: #ddd;
         padding-bottom: 1rem;
         position: relative;
+        width: 60rem;
       }
       &__action-btns {
         display: flex;

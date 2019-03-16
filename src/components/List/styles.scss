@@ -1,5 +1,5 @@
 .list {
-  padding: 6rem 6rem 0 6rem;
+  padding-top: 6rem;
   background-color: #121212;
   &__header {
     text-transform: capitalize;
@@ -20,6 +20,12 @@
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: none;
     }
   }
 

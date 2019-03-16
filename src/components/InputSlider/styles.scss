@@ -1,0 +1,31 @@
+.input-range__slider {
+  background: #ff1120;
+  border: 1px solid #ff1120;
+  height: 12px;
+  width: 12px;
+  margin-left: -4px;
+  margin-top: -8px;
+}
+
+.input-range__label {
+  font-size: 1.2rem;
+}
+
+.input-range__label--min,
+.input-range__label--max {
+  bottom: -16px;
+  position: absolute;
+}
+
+.input-range__label--value {
+  display: none;
+}
+
+// .input-range__track {
+//   border-radius: 10px;
+//   height: 3px;
+// }
+
+.input-range__track--active {
+  background: #ff1120;
+}
