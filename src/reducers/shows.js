@@ -1,12 +1,10 @@
 import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
-  latest: null,
   current: null,
   popular: null,
   top: null,
-  airingToday: null,
-  similar: null
+  airingToday: null
 }
 
 export default (state = initialState, action) => {
@@ -21,9 +19,6 @@ export default (state = initialState, action) => {
       return { ...state, popular: action.shows }
 
     case actionTypes.SET_TOP_SHOWS:
-      return { ...state, top: action.shows }
-
-    case actionTypes.SET_SIMILAR_SHOWS:
       return { ...state, top: action.shows }
 
     default:
