@@ -4,7 +4,8 @@ const initialState = {
   type: 'movie',
   current: null,
   credits: null,
-  videos: null
+  videos: null,
+  similar: null
 }
 
 export default (state = initialState, action) => {
@@ -13,7 +14,13 @@ export default (state = initialState, action) => {
       return { ...state, type: action.itemType }
 
     case actionTypes.SET_ITEM_CLEAR:
-      return { ...state, current: null, credits: null, videos: null }
+      return {
+        ...state,
+        current: null,
+        credits: null,
+        videos: null,
+        similar: null
+      }
 
     case actionTypes.SET_QUERY_ITEM:
       return { ...state, current: action.item }
@@ -23,6 +30,10 @@ export default (state = initialState, action) => {
 
     case actionTypes.SET_QUERY_ITEM_VIDEOS:
       return { ...state, videos: action.videos }
+
+    case actionTypes.SET_SIMILAR_ITEMS:
+      return { ...state, similar: action.items }
+
     default:
       return state
   }
