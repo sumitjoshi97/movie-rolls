@@ -34,7 +34,20 @@ export default class List extends PureComponent {
           />
         ))
 
-      //for movies / tv shows
+      //for tv shows
+      case 'tv':
+        return items.map(item => (
+          <ListItem
+            key={item.id}
+            type={type}
+            pageId={item.id}
+            name={item.name}
+            rating={item.vote_average}
+            poster={item.poster_path}
+          />
+        ))
+
+      //for movies
       default:
         return items.map(item => (
           <ListItem
