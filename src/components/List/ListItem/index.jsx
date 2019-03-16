@@ -7,10 +7,10 @@ import * as actions from '../../../actions'
 
 class ListItem extends PureComponent {
   static propTypes = {
-    pageId: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
+    pageId: PropTypes.number,
+    type: PropTypes.string,
     poster: PropTypes.string,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     setType: PropTypes.func.isRequired
   }
 
