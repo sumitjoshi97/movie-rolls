@@ -13,7 +13,6 @@ export default class Nav extends Component {
       isActive[0] = !isActive[0]
       isActive[1] = !isActive[1]
     }
-    console.log(isActive)
     this.setState({
       isActive
     })
@@ -22,11 +21,13 @@ export default class Nav extends Component {
   renderNav = () => {
     return this.props.options.map((option, index) => (
       <NavItem
-        name={option}
-        key={index}
+        key={option.type}
         index={index}
+        name={option.name}
+        type={option.type}
         isActive={this.state.isActive[index]}
         setActive={this.setActive}
+        handleNav={this.props.handleNav}
       />
     ))
   }

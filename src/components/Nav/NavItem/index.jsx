@@ -16,7 +16,10 @@ export default class NavItem extends Component {
         name={this.props.name}
         className='nav-item'
         style={this.props.isActive ? style.active : style.inActive}
-        onClick={() => this.props.setActive(this.props.index)}
+        onClick={() => {
+          this.props.setActive(this.props.index)
+          this.props.handleNav(this.props.type)
+        }}
       >
         {this.props.name}
       </div>
