@@ -4,16 +4,16 @@ import { setError } from './index'
 import { authRef, facebookProvider, googleProvider } from '../config/firebase'
 
 ///////////////////////////////////////////////////////////
-export const fetchUserSuccess = user => ({
+export const fetchUserSuccess = userId => ({
   type: actionTypes.FETCH_USER_SUCCESS,
-  user
+  userId
 })
 
 //fetch user if logged in
 export const fetchUser = () => dispatch => {
   authRef.onAuthStateChanged(user => {
     if (user) {
-      dispatch(fetchUserSuccess(user))
+      dispatch(fetchUserSuccess(user.uid))
     } else {
       dispatch(fetchUserSuccess(null))
     }
@@ -44,6 +44,20 @@ export const loginUserWithSocial = provider => dispatch => {
   return authRef
     .signInWithPopup(authProvider)
     .then(res => console.log('success'))
+    .catch(err => setError())
+}
+
+/////////////////////////////////////////////////////////////////
+///logout user
+
+export const logoutSuccess = () => ({
+  type: actionTypes.LOGOUT_SUCCESS
+})
+
+export const logout = () => dispatch => {
+  return authRef
+    .signOut()
+    .then(() => dispatch(logoutSuccess()))
     .catch(err => setError())
 }
 
