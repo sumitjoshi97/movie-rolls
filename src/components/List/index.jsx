@@ -34,29 +34,15 @@ export default class List extends PureComponent {
           />
         ))
 
-      //for tv shows
-      case 'tv':
-        return items.map(item => (
-          <ListItem
-            key={item.id}
-            type={type}
-            pageId={item.id}
-            name={item.name}
-            rating={item.vote_average}
-            poster={item.poster_path}
-          />
-        ))
-
-      //for movies
+      //for movies / tv shows
       default:
         return items.map(item => (
           <ListItem
-            key={item.id}
+            key={type + item.id}
             type={type}
-            pageId={item.id}
-            name={item.title}
-            rating={item.vote_average}
-            poster={item.poster_path}
+            pageId={item.id || item.pageId}
+            name={item.name || item.title}
+            poster={item.poster_path || item.poster}
           />
         ))
     }
@@ -71,12 +57,50 @@ export default class List extends PureComponent {
       swipeToSlide: true,
       infinite: false,
       nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />
+      prevArrow: <PrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 3 : 6
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 3 : 5
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 2 : 5
+          }
+        },
+        {
+          breakpoint: 680,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 1 : 4
+          }
+        },
+        {
+          breakpoint: 570,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 1 : 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: this.props.type === 'video' ? 1 : 2
+          }
+        }
+      ]
     }
-    const { name } = this.props
+
     return (
       <div className='list'>
-        <h2 className='list__header'>{name}</h2>
+        <h2 className='list__header'>{this.props.name}</h2>
         <Slider {...sliderOptions}>{this.renderList()}</Slider>
       </div>
     )
