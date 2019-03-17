@@ -42,7 +42,6 @@ export const getDiscoverShowResults = ({
   sortBy,
   orderBy
 }) => dispatch => {
-  console.log(sortBy, orderBy)
   return axios
     .get(
       `/discover/tv?language=en-US&page=1&include_null_first_air_dates=false
