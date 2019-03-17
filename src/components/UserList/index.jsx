@@ -1,62 +1,42 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
-import ActionBtn from './ActionBtn'
-import UserListItem from './UserListItem'
+import List from '../List'
 
 import './styles.scss'
 
-export default class UserList extends Component {
-  state = {
-    active: 'movie'
-  }
-
-  handleType = active => {
-    this.setState({ active })
+export default class UserList extends PureComponent {
+  static propTypes = {
+    list: PropTypes.object
   }
 
   renderItems = () => {
-    const { active } = this.state
     const { list } = this.props
 
-    let renderList = []
+    let movieList = []
+    let tvList = []
 
-    for (let item in list) {
-      if (list[item].type === active) {
-        renderList.push(list[item])
+    if (list) {
+      for (let item in list) {
+        if (list[item].type === 'movie') {
+          movieList.push(list[item])
+        } else {
+          tvList.push(list[item])
+        }
       }
-    }
 
-    return renderList.map(item => (
-      <UserListItem
-        key={item.pageId}
-        pageId={item.pageId}
-        name={item.title}
-        poster={item.poster}
-        type={item.type}
-      />
-    ))
+      return movieList.length === 0 && tvList.length === 0 ? (
+        <h2 className='sorry-text'>You don't have any yet, start adding now</h2>
+      ) : (
+        <>
+          <List name='movies' type='movie' items={movieList} />
+          <List name='TV shows' type='tv' items={tvList} />
+        </>
+      )
+    }
   }
 
   render() {
-    return (
-      <div className='user-list'>
-        <div className='user-list__action-btns'>
-          <ActionBtn
-            text={this.props.text}
-            name='movie'
-            active={this.state.active}
-            onclick={this.handleType}
-          />
-          <ActionBtn
-            text={this.props.text}
-            name='tv'
-            active={this.state.active}
-            onclick={this.handleType}
-          />
-        </div>
-
-        <div className='user-list__items'>{this.renderItems()}</div>
-      </div>
-    )
+    return <div className='user-list'>{this.renderItems()}</div>
   }
 }
