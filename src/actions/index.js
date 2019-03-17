@@ -28,6 +28,7 @@ export {
   loginUserWithEmailPassword,
   loginUserWithSocial,
   fetchUser,
+  logout,
   setRedirectPath
 } from './auth'
 
