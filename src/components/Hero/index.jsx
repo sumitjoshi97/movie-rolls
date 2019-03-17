@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import RatingStars from '../RatingStars'
@@ -128,6 +129,7 @@ class Hero extends PureComponent {
   render() {
     const {
       title,
+      pageId,
       poster,
       backdrop,
       rating,
@@ -143,50 +145,55 @@ class Hero extends PureComponent {
 
     return (
       <div className='hero' style={heroBackdrop}>
-        <div className='hero__info'>
-          <img
-            src={`https://image.tmdb.org/t/p/w185/${poster}`}
-            alt=''
-            className='hero__info__img'
-          />
-          <div className='hero__info__text'>
-            <h1 className='hero__info__text__header'>{title}</h1>
+        <Link
+          to={`/details/${pageId}`}
+          onClick={() => this.props.setType(type)}
+        >
+          <div className='hero__info'>
+            <img
+              src={`https://image.tmdb.org/t/p/w185/${poster}`}
+              alt=''
+              className='hero__info__img'
+            />
+            <div className='hero__info__text'>
+              <h1 className='hero__info__text__header'>{title}</h1>
 
-            <div className='hero__info__text__rating'>
-              {rating}
-              <RatingStars stars={rating} />
-            </div>
+              <div className='hero__info__text__rating'>
+                {rating}
+                <RatingStars stars={rating} />
+              </div>
 
-            <div className='hero__info__text__type'>
-              <span>{type}</span>
+              <div className='hero__info__text__type'>
+                <span>{type}</span>
 
-              {adult ? (
-                <span className='hero__info__text__type__adult'>'18+'</span>
-              ) : (
-                ''
-              )}
+                {adult ? (
+                  <span className='hero__info__text__type__adult'>'18+'</span>
+                ) : (
+                  ''
+                )}
 
-              <span className='hero__info__text__year'>{year}</span>
-            </div>
+                <span className='hero__info__text__year'>{year}</span>
+              </div>
 
-            <p className='hero__info__text__summary'>{summary}</p>
+              <p className='hero__info__text__summary'>{summary}</p>
 
-            <div className='hero__info__text__action-btns'>
-              <button
-                className='hero__info__text__action-btns__favorite'
-                onClick={() => this.handleList('favorite')}
-              >
-                {this.state.isFavorite ? 'remove from' : 'add to '} favorite
-              </button>
-              <button
-                className='hero__info__text__action-btns__watch-later'
-                onClick={() => this.handleList('watch')}
-              >
-                {this.state.isWatch ? 'remove from' : 'add to '} Watch Later
-              </button>
+              <div className='hero__info__text__action-btns'>
+                <button
+                  className='hero__info__text__action-btns__favorite'
+                  onClick={() => this.handleList('favorite')}
+                >
+                  {this.state.isFavorite ? 'remove from' : 'add to '} favorite
+                </button>
+                <button
+                  className='hero__info__text__action-btns__watch-later'
+                  onClick={() => this.handleList('watch')}
+                >
+                  {this.state.isWatch ? 'remove from' : 'add to '} Watch Later
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
     )
   }
@@ -205,7 +212,9 @@ const mapDispatchToProps = dispatch => ({
   removeFromList: (list, itemId, userIdId) =>
     dispatch(actions.removeFromList(list, itemId, userIdId)),
 
-  setRedirectPath: path => dispatch(actions.setRedirectPath(path))
+  setRedirectPath: path => dispatch(actions.setRedirectPath(path)),
+
+  setType: type => dispatch(actions.setItemType(type))
 })
 
 export default connect(
