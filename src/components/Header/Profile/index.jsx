@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import './styles.scss'
 
-const Header = ({ isAuth, profileURL }) => {
+const Header = ({ isAuth, profileURL, ...props }) => {
   const [hidden, setHidden] = useState(true)
 
   return (
@@ -28,7 +29,7 @@ const Header = ({ isAuth, profileURL }) => {
             <div className='profile-btn__list'>
               <Link to='/profile/favorites'>
                 <button className='profile-btn__list__favorite'>
-                  Favorite
+                  favorite
                 </button>
               </Link>
               <Link to='/profile/watch-later'>
@@ -36,15 +37,28 @@ const Header = ({ isAuth, profileURL }) => {
                   watch later
                 </button>
               </Link>
-              <button className='profile-btn__list__logout'>logout</button>
+              <button
+                className='profile-btn__list__logout'
+                onClick={props.logout}
+              >
+                logout
+              </button>
             </div>
           )}
         </>
       ) : (
-        <Link to='/profile/auth'>Login</Link>
+        <Link to='/auth' className='login'>
+          Login
+        </Link>
       )}
     </>
   )
+}
+
+Header.propTypes = {
+  isAuth: PropTypes.string,
+  profileURL: PropTypes.string,
+  logout: PropTypes.func
 }
 
 export default Header

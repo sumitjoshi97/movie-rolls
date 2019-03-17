@@ -6,7 +6,7 @@ import './styles.scss'
 
 export default class Nav extends Component {
   static propTypes = {
-    options: PropTypes.object
+    options: PropTypes.array
   }
 
   state = {

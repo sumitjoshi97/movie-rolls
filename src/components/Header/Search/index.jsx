@@ -1,5 +1,6 @@
 import React from 'react'
 import IosSearchOutline from 'react-ionicons/lib/IosSearchOutline'
+import PropTypes from 'prop-types'
 
 import './styles.scss'
 
@@ -15,22 +16,28 @@ const styles = {
   }
 }
 
-const Search = ({ isActive, handleInput, handleSearch }) => (
+const Search = ({ isActive, ...props }) => (
   <div className='search'>
     <input
       type='text'
       className='search__input'
       style={isActive ? styles.inputStyle : null}
-      onChange={handleInput}
+      onChange={props.handleInput}
     />
     <button
       className='search__btn'
-      onClick={handleSearch}
+      onClick={props.handleSearch}
       style={isActive ? styles.btnStyle : null}
     >
       <IosSearchOutline fontSize='18px' color={isActive ? '#000' : '#fff'} />
     </button>
   </div>
 )
+
+Search.propTypes = {
+  isActive: PropTypes.bool,
+  handleInput: PropTypes.func,
+  handleSearch: PropTypes.func
+}
 
 export default Search

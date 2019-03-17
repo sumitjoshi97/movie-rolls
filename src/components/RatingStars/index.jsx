@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import Star from './Star'
 
 import './styles.scss'
 
 export default class RatingStars extends Component {
+  static propTypes = {
+    stars: PropTypes.number
+  }
+
   renderStars = () => {
     let { stars } = this.props
     stars = stars / 2

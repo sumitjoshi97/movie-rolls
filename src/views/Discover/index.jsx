@@ -13,8 +13,8 @@ class Discover extends Component {
   static propTypes = {
     movies: PropTypes.object,
     shows: PropTypes.object,
-    fetchDiscoverMovies: PropTypes.func(),
-    fetchDiscoverShows: PropTypes.func()
+    fetchDiscoverMovies: PropTypes.func,
+    fetchDiscoverShows: PropTypes.func
   }
 
   state = {
