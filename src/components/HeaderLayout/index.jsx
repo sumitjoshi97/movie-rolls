@@ -16,7 +16,7 @@ export default class HeaderLayout extends Component {
   }
 
   listenScrollEvent = e => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 40) {
       this.setState({ color: '#212121' })
     } else {
       this.setState({ color: 'transparent' })
