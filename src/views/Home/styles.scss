@@ -1,19 +1,29 @@
 .slick-dots {
   width: 40rem !important;
   bottom: 50% !important;
-  right: -14rem;
+  right: -11rem;
   transform: rotate(90deg);
-  li > button {
-    width: 6px !important;
-    height: 6px !important;
-    border: 1px solid #fff !important;
-    border-radius: 1rem;
+  li {
+    height: 14px !important;
+    width: 14px !important;
+    border-radius: 100px;
+    margin: 0 10px !important;
+    button {
+      width: 4px !important;
+      height: 4px !important;
+      border: 1px solid #fff !important;
+      border-radius: 1rem;
+      &::before {
+        width: 0 !important;
+        height: 0 !important;
+        content: none !important;
+      }
+    }
   }
-  &::before {
-    width: 0 !important;
-    height: 0 !important;
-    content: "" !important;
-  }
+}
+
+.slick-active > button {
+  background: #fff !important;
 }
 
 .home {

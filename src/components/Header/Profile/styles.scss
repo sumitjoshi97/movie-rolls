@@ -1,6 +1,6 @@
 .profile-btn {
   position: absolute;
-  right: 4rem;
+  right: 8rem;
   width: 4rem;
   height: 4rem;
   background: transparent;
@@ -23,7 +23,7 @@
     flex-direction: column;
     position: absolute;
     top: 8rem;
-    right: 4rem;
+    right: 8rem;
     border: 1px solid rgba(255, 255, 255, 0.5);
 
     &__favorite,
@@ -37,10 +37,14 @@
       border: none;
       text-transform: uppercase;
       cursor: pointer;
-
+      transition: all 0.2s;
       &:focus,
       &:active {
         outline: none;
+      }
+
+      &:hover {
+        background: #3a3a3a;
       }
     }
 
@@ -49,4 +53,9 @@
       background: #212121;
     }
   }
+}
+
+.login {
+  color: #fff;
+  text-decoration: none;
 }
