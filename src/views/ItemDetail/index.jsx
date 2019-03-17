@@ -41,20 +41,15 @@ class ItemDetail extends Component {
   }
 
   fetchItem = () => {
-    this.props.fetchQueryItem(this.props.type, this.props.match.params.itemId)
-    this.props.fetchQueryItemDetails(
-      this.props.type,
-      this.props.match.params.itemId
-    )
-    this.props.fetchQueryItemVideos(
-      this.props.type,
-      this.props.match.params.itemId
-    )
-    this.props.fetchSimilarItems(
-      this.props.type,
-      this.props.match.params.itemId
-    )
+    const { type, match } = this.props
+    const itemId = match.params.itemId
+
+    this.props.fetchQueryItem(type, itemId)
+    this.props.fetchQueryItemDetails(type, itemId)
+    this.props.fetchQueryItemVideos(type, itemId)
+    this.props.fetchSimilarItems(type, itemId)
   }
+
   renderHero = () => {
     const { item, type } = this.props
 
@@ -71,7 +66,7 @@ class ItemDetail extends Component {
             type={type}
             summary={item.overview}
             adult={item.adult}
-            year={item.release_date.split('-')[0]}
+            year={item.release_date.split('-')[0] || ''}
             history={this.props.history}
             location={this.props.location.pathname}
           />
@@ -87,7 +82,7 @@ class ItemDetail extends Component {
             rating={item.vote_average}
             type={type}
             summary={item.overview}
-            year={item.first_air_date.split('-')[0]}
+            year={item.first_air_date.split('-')[0] || ''}
             history={this.props.history}
             location={this.props.location.pathname}
           />
@@ -102,23 +97,28 @@ class ItemDetail extends Component {
         return (
           <>
             <List type='cast' name='Cast' items={this.props.credits.cast} />
-            {this.props.videos ? (
-              <List
-                type='video'
-                name='videos'
-                items={this.props.videos.results}
-              />
-            ) : null}
+            {this.props.videos &&
+              (this.props.videos.results.length > 0 ? (
+                <List
+                  type='video'
+                  name='videos'
+                  items={this.props.videos.results}
+                />
+              ) : null)}
           </>
         )
       }
     } else {
-      return (
+      return this.props.similar.results.length > 0 ? (
         <List
           type={this.props.type}
           name='Similar'
           items={this.props.similar.results}
         />
+      ) : (
+        <h3 className='sorry-text'>
+          Sorry, we can't find anything looking similar
+        </h3>
       )
     }
   }
