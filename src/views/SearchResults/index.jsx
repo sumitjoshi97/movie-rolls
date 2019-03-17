@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import List from '../../components/List'
 
 import { getSearchResults } from '../../actions'
 
+import './styles.scss'
+
 class SearchResults extends Component {
+  static propTypes = {
+    searchResults: PropTypes.object,
+    getSearchResults: PropTypes.func
+  }
+
   componentDidMount() {
     this.fetchSearchResults()
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (
       prevProps.match.params.searchQuery !== this.props.match.params.searchQuery
     ) {
@@ -49,7 +57,10 @@ class SearchResults extends Component {
 
     return (
       <div className='search-results'>
-        {this.props.searchResults ? this.renderResults() : searchError}
+        <h2 className='search-results__header'>Search Results</h2>
+        <div className='search-results__list'>
+          {this.props.searchResults ? this.renderResults() : searchError}
+        </div>
       </div>
     )
   }

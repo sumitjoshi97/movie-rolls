@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import PropTypes from 'prop-types'
 import List from '../../components/List'
 import InputSlider from '../../components/InputSlider'
 import InputDropdown from '../../components/InputDropdown'
@@ -10,6 +10,13 @@ import * as actions from '../../actions'
 import './styles.scss'
 
 class Discover extends Component {
+  static propTypes = {
+    movies: PropTypes.object,
+    shows: PropTypes.object,
+    fetchDiscoverMovies: PropTypes.func(),
+    fetchDiscoverShows: PropTypes.func()
+  }
+
   state = {
     year: {
       label: String(new Date().getFullYear()),
@@ -45,7 +52,7 @@ class Discover extends Component {
       year: year.value,
       ratings,
       sortBy: sortBy.value,
-      orderBy: orderBy.label
+      orderBy: orderBy.value
     }
     this.props.fetchDiscoverMovies(queryData)
     this.props.fetchDiscoverShows(queryData)

@@ -26,7 +26,22 @@ const sliderOptions = {
 
 class Home extends Component {
   static propTypes = {
-    fetchCurrentMovies: PropTypes.func
+    currentMovies: PropTypes.object,
+    popularMovies: PropTypes.object,
+    upcomingMovies: PropTypes.object,
+    topMovies: PropTypes.object,
+    currentShows: PropTypes.object,
+    popularShows: PropTypes.object,
+    airingShows: PropTypes.object,
+    topShows: PropTypes.object,
+    fetchCurrentMovies: PropTypes.func,
+    fetchPopularMovies: PropTypes.func,
+    fetchUpcomingMovies: PropTypes.func,
+    fetchTopMovies: PropTypes.func,
+    fetchCurrentShows: PropTypes.func,
+    fetchPopularShows: PropTypes.func,
+    fetchAiringShows: PropTypes.func,
+    fetchTopShows: PropTypes.func
   }
 
   state = {
@@ -169,7 +184,6 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
   // movies state
-  latest: state.movies.latest,
   currentMovies: state.movies.current,
   popularMovies: state.movies.popular,
   upcomingMovies: state.movies.upcoming,

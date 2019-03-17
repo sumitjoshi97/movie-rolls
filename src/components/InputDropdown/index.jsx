@@ -1,9 +1,16 @@
 import React, { PureComponent } from 'react'
 import IosArrowDown from 'react-ionicons/lib/IosArrowDown'
+import PropTypes from 'prop-types'
 
 import './styles.scss'
 
 export default class InputDropdown extends PureComponent {
+  static propTypes = {
+    options: PropTypes.array,
+    value: PropTypes.object,
+    handleDropdown: PropTypes.func
+  }
+
   state = {
     isActive: false
   }

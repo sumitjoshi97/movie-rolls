@@ -1,28 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export default class NavItem extends Component {
-  render() {
-    const style = {
-      active: {
-        borderBottom: '0.5rem solid #ff0000'
-      },
-      inActive: {
-        borderBottom: '0.5rem solid transparent'
-      }
+const NavItem = ({ index, name, type, isActive, ...props }) => {
+  const style = {
+    active: {
+      borderBottom: '0.5rem solid #ff0000'
+    },
+    inActive: {
+      borderBottom: '0.5rem solid transparent'
     }
-
-    return (
-      <div
-        name={this.props.name}
-        className='nav-item'
-        style={this.props.isActive ? style.active : style.inActive}
-        onClick={() => {
-          this.props.setActive(this.props.index)
-          this.props.handleNav(this.props.type)
-        }}
-      >
-        {this.props.name}
-      </div>
-    )
   }
+
+  return (
+    <div
+      name={name}
+      className='nav-item'
+      style={isActive ? style.active : style.inActive}
+      onClick={() => {
+        props.setActive(index)
+        props.handleNav(type)
+      }}
+    >
+      {name}
+    </div>
+  )
 }
+
+NavItem.propTypes = {
+  index: PropTypes.number,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  isActive: PropTypes.bool,
+  setActive: PropTypes.func,
+  handleNav: PropTypes.func
+}
+
+export default NavItem

@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-
+import PropTypes from 'prop-types'
 import AuthForm from '../../components/AuthForm'
 
 import './styles.scss'
 
 class Auth extends Component {
+  static propTypes = {
+    isAuth: PropTypes.bool,
+    redirectPath: PropTypes.string
+  }
+
   render() {
-    const isRedirect = this.props.isAuthenticated ? (
+    const isRedirect = this.props.isAuth ? (
       <Redirect to={this.props.redirectPath} />
     ) : null
 
@@ -22,7 +27,7 @@ class Auth extends Component {
 }
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.user !== null,
+  isAuth: state.auth.userId,
   redirectPath: state.auth.redirectPath
 })
 

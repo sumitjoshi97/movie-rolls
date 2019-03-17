@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import * as actions from '../../actions'
 
 import './styles.scss'
 
 class AuthForm extends Component {
+  static propTypes = {
+    signupUser: PropTypes.func,
+    loginUserWithEmail: PropTypes.func,
+    loginUserWithSocial: PropTypes.func,
+    fetchUser: PropTypes.func
+  }
+
   state = {
     email: '',
     password: '',
@@ -40,29 +48,15 @@ class AuthForm extends Component {
     if (active === 'login') {
       await loginUserWithEmail(email, password)
       await fetchUser()
-
-      if (this.props.user) {
-        await this.props.fetchList('favorite', this.props.user.uid)
-        await this.props.fetchList('watch', this.props.user.uid)
-      }
     } else {
       await signupUser(email, password)
       await fetchUser()
-      if (this.props.user) {
-        await this.props.fetchList('favorite', this.props.user.uid)
-        await this.props.fetchList('watch', this.props.user.uid)
-      }
     }
   }
 
   authWithSocial = async provider => {
-    const { user } = this.props
     await this.props.loginUserWithSocial(provider)
     await this.props.fetchUser()
-    if (user) {
-      await this.props.fetchList('favorite', user.uid)
-      await this.props.fetchList('watch', user.uid)
-    }
   }
 
   render() {
@@ -131,10 +125,6 @@ class AuthForm extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.auth.user
-})
-
 const mapDispatchToProps = dispatch => ({
   signupUser: (email, password) =>
     dispatch(actions.createUser(email, password)),
@@ -145,11 +135,10 @@ const mapDispatchToProps = dispatch => ({
   loginUserWithSocial: provider =>
     dispatch(actions.loginUserWithSocial(provider)),
 
-  fetchUser: () => dispatch(actions.fetchUser()),
-  fetchList: (type, userId) => dispatch(actions.fetchList(type, userId))
+  fetchUser: () => dispatch(actions.fetchUser())
 })
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(AuthForm)

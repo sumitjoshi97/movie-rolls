@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { Link, withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import Search from './Search'
 import Profile from './Profile'
 
+import { logout } from '../../actions'
+
 import './styles.scss'
 
 class Header extends Component {
+  static propsTypes = {
+    logout: PropTypes.func.isRequired,
+    userId: PropTypes.string
+  }
+
   state = {
     text: '',
     search: false
@@ -29,8 +37,13 @@ class Header extends Component {
     }))
   }
 
+  handleLogout = () => {
+    this.props.logout()
+    this.props.history.push('/')
+  }
+
   render() {
-    const isAuth = this.props.userId !== undefined
+    const isAuth = this.props.userId
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
         <ul className='header__left'>
@@ -53,7 +66,7 @@ class Header extends Component {
         </ul>
         <ul className='header__right'>
           <li className='header__right__profile'>
-            <Profile isAuth={isAuth} />
+            <Profile isAuth={isAuth} logout={this.handleLogout} />
           </li>
         </ul>
       </div>
@@ -65,4 +78,7 @@ const mapStateToProps = state => ({
   userId: state.auth.userId
 })
 
-export default connect(mapStateToProps)(withRouter(Header))
+export default connect(
+  mapStateToProps,
+  { logout }
+)(withRouter(Header))
