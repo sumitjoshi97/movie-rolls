@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const NavItem = ({ index, name, type, isActive, ...props }) => {
   const style = {
     active: {
-      borderBottom: '0.5rem solid #ff0000'
+      borderBottom: '0.5rem solid #ff1e1e'
     },
     inActive: {
       borderBottom: '0.5rem solid transparent'
