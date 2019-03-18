@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import RatingStars from '../RatingStars'
@@ -75,8 +75,8 @@ class Hero extends PureComponent {
         this.handleWatchList(type)
       }
     } else {
-      this.props.history.push('/profile/auth')
-      this.props.setRedirectPath(this.props.location)
+      this.props.history.push('/auth')
+      this.props.setRedirectPath(this.props.location.pathname)
     }
   }
 
@@ -145,17 +145,22 @@ class Hero extends PureComponent {
 
     return (
       <div className='hero' style={heroBackdrop}>
-        <Link
-          to={`/details/${pageId}`}
-          onClick={() => this.props.setType(type)}
-        >
-          <div className='hero__info'>
+        <div className='hero__info'>
+          <Link
+            to={`/details/${pageId}`}
+            onClick={() => this.props.setType(type)}
+          >
             <img
               src={`https://image.tmdb.org/t/p/w185/${poster}`}
               alt=''
               className='hero__info__img'
             />
-            <div className='hero__info__text'>
+          </Link>
+          <div className='hero__info__text'>
+            <Link
+              to={`/details/${pageId}`}
+              onClick={() => this.props.setType(type)}
+            >
               <h1 className='hero__info__text__header'>{title}</h1>
 
               <div className='hero__info__text__rating'>
@@ -176,24 +181,23 @@ class Hero extends PureComponent {
               </div>
 
               <p className='hero__info__text__summary'>{summary}</p>
-
-              <div className='hero__info__text__action-btns'>
-                <button
-                  className='hero__info__text__action-btns__favorite'
-                  onClick={() => this.handleList('favorite')}
-                >
-                  {this.state.isFavorite ? 'remove from' : 'add to '} favorite
-                </button>
-                <button
-                  className='hero__info__text__action-btns__watch-later'
-                  onClick={() => this.handleList('watch')}
-                >
-                  {this.state.isWatch ? 'remove from' : 'add to '} Watch Later
-                </button>
-              </div>
+            </Link>
+            <div className='hero__info__text__action-btns'>
+              <button
+                className='hero__info__text__action-btns__favorite'
+                onClick={() => this.handleList('favorite')}
+              >
+                {this.state.isFavorite ? 'remove from' : 'add to '} favorite
+              </button>
+              <button
+                className='hero__info__text__action-btns__watch-later'
+                onClick={() => this.handleList('watch')}
+              >
+                {this.state.isWatch ? 'remove from' : 'add to '} Watch Later
+              </button>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     )
   }
@@ -220,4 +224,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Hero)
+)(withRouter(Hero))
