@@ -25,9 +25,7 @@ export default class UserList extends PureComponent {
         }
       }
 
-      return movieList.length === 0 && tvList.length === 0 ? (
-        <h2 className='sorry-text'>You don't have any yet, start adding now</h2>
-      ) : (
+      return (
         <>
           <List name='movies' type='movie' items={movieList} />
           <List name='TV shows' type='tv' items={tvList} />
