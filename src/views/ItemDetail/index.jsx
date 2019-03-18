@@ -67,8 +67,6 @@ class ItemDetail extends Component {
             summary={item.overview}
             adult={item.adult}
             year={item.release_date.split('-')[0] || ''}
-            history={this.props.history}
-            location={this.props.location.pathname}
           />
         )
       } else {
@@ -83,8 +81,6 @@ class ItemDetail extends Component {
             type={type}
             summary={item.overview}
             year={item.first_air_date.split('-')[0] || ''}
-            history={this.props.history}
-            location={this.props.location.pathname}
           />
         )
       }
