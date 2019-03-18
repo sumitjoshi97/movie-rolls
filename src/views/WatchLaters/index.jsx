@@ -15,11 +15,17 @@ class WatchLaters extends Component {
     return (
       <div className='watch-later'>
         <h2 className='watch-later__header'>my watchlist</h2>
-        <UserList
-          list={this.props.watch}
-          text='watch later'
-          history={this.props.history}
-        />
+        {this.props.watch ? (
+          <UserList
+            list={this.props.watch}
+            text='watch later'
+            history={this.props.history}
+          />
+        ) : (
+          <h2 className='sorry-text'>
+            You don't have any yet, start adding now
+          </h2>
+        )}
       </div>
     )
   }

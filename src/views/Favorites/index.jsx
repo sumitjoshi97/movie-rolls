@@ -15,11 +15,17 @@ class Favorites extends Component {
     return (
       <div className='favorite'>
         <h2 className='favorite__header'>my favorites</h2>
-        <UserList
-          list={this.props.favorite}
-          text='favorite'
-          history={this.props.history}
-        />
+        {this.props.favorite ? (
+          <UserList
+            list={this.props.favorite}
+            text='favorite'
+            history={this.props.history}
+          />
+        ) : (
+          <h2 className='sorry-text'>
+            You don't have any yet, start adding now
+          </h2>
+        )}
       </div>
     )
   }
