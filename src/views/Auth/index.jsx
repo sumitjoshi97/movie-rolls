@@ -8,7 +8,7 @@ import './styles.scss'
 
 class Auth extends Component {
   static propTypes = {
-    isAuth: PropTypes.bool,
+    isAuth: PropTypes.string,
     redirectPath: PropTypes.string
   }
 
