@@ -54,11 +54,6 @@ class AuthForm extends Component {
     }
   }
 
-  authWithSocial = async provider => {
-    await this.props.loginUserWithSocial(provider)
-    await this.props.fetchUser()
-  }
-
   render() {
     const { active } = this.state
     return (
@@ -103,15 +98,9 @@ class AuthForm extends Component {
         <div className='auth-form__social-btns'>
           <button
             className='auth-form__social-btns__google action-btn'
-            onClick={() => this.authWithSocial('google')}
+            onClick={this.props.loginUserWithSocial}
           >
             Continue with Google
-          </button>
-          <button
-            className='auth-form__social-btns__facebook action-btn'
-            onClick={() => this.authWithSocial('facebook')}
-          >
-            Continue with Facebook
           </button>
         </div>
 
@@ -132,8 +121,7 @@ const mapDispatchToProps = dispatch => ({
   loginUserWithEmail: (email, password) =>
     dispatch(actions.loginUserWithEmailPassword(email, password)),
 
-  loginUserWithSocial: provider =>
-    dispatch(actions.loginUserWithSocial(provider)),
+  loginUserWithSocial: () => dispatch(actions.loginUserWithSocial()),
 
   fetchUser: () => dispatch(actions.fetchUser())
 })

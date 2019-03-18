@@ -1,7 +1,7 @@
 import * as actionTypes from './actionTypes'
 
 import { setError } from './index'
-import { authRef, facebookProvider, googleProvider } from '../config/firebase'
+import { authRef, googleProvider } from '../config/firebase'
 
 ///////////////////////////////////////////////////////////
 export const fetchUserSuccess = userId => ({
@@ -39,10 +39,9 @@ export const loginUserWithEmailPassword = (email, password) => dispatch => {
 }
 
 // login user with social
-export const loginUserWithSocial = provider => dispatch => {
-  const authProvider = provider === 'google' ? googleProvider : facebookProvider
+export const loginUserWithSocial = () => dispatch => {
   return authRef
-    .signInWithPopup(authProvider)
+    .signInWithPopup(googleProvider)
     .then(res => console.log('success'))
     .catch(err => setError())
 }
