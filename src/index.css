@@ -38,3 +38,15 @@ body {
 .app {
   position: relative;
 }
+
+.sorry-text {
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+}
+
+::selection {
+  background: none;
+}
