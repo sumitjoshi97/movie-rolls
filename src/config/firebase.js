@@ -11,10 +11,9 @@ const config = {
 
 initializeApp(config)
 
-const facebookProvider = new auth.FacebookAuthProvider()
 const googleProvider = new auth.GoogleAuthProvider()
 
 const authRef = auth()
 const databaseRef = new database().ref()
 
-export { facebookProvider, googleProvider, authRef, databaseRef }
+export { googleProvider, authRef, databaseRef }
