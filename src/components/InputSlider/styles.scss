@@ -1,6 +1,8 @@
+@import "../../sass/variables.scss";
+
 .input-range__slider {
-  background: #ff1120;
-  border: 1px solid #ff1120;
+  background: $color-primary;
+  border: 1px solid $color-primary;
   height: 12px;
   width: 12px;
   margin-left: -4px;
@@ -21,11 +23,6 @@
   display: none;
 }
 
-// .input-range__track {
-//   border-radius: 10px;
-//   height: 3px;
-// }
-
 .input-range__track--active {
-  background: #ff1120;
+  background: $color-primary;
 }

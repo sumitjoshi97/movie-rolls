@@ -1,10 +1,13 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   line-height: 3rem;
   vertical-align: middle;
-  padding: 3rem 8rem;
+  padding: 3rem $padding-large;
   position: fixed;
   width: 100%;
   top: 0;
@@ -12,6 +15,10 @@
   background: transparent;
   z-index: 4000;
   transition: all 0.4s;
+
+  @include respond(phone) {
+    padding: 3rem 4rem;
+  }
 
   &__left {
     display: flex;
@@ -33,7 +40,7 @@
         font-weight: 700;
         font-size: 2rem;
         letter-spacing: 2px;
-        color: #ff0000;
+        color: $color-primary;
       }
     }
 
@@ -41,9 +48,8 @@
       a {
         text-decoration: none;
         text-transform: capitalize;
-        color: #fff;
+        color: $color-white;
         letter-spacing: 1px;
-        // font-weight: 400;
       }
     }
   }

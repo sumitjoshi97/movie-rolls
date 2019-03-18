@@ -1,16 +1,22 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
 .footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: #212121;
-  padding: 6rem 8rem;
+  background: $color-dark-primary;
+  padding: 6rem $padding-large;
 
+  @include respond(phone) {
+    padding: 6rem 4rem;
+  }
   &__brand {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     &__name {
-      color: #ff0000;
+      color: $color-primary;
       font-size: 2rem;
       text-transform: uppercase;
       letter-spacing: 3px;

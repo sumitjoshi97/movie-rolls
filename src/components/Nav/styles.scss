@@ -1,3 +1,6 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
 .nav {
   position: absolute;
   width: 100%;
@@ -8,7 +11,10 @@
 
   & > * {
     text-transform: uppercase;
-    margin: 0 8rem;
+    margin: 0 $padding-large;
+    @include respond(phone) {
+      margin: 0 4rem;
+    }
     cursor: pointer;
   }
 }

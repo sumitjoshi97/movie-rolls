@@ -1,7 +1,8 @@
+@import "../../sass/variables.scss";
+
 .user-list {
   position: relative;
-  // padding: 0 8rem;
   &:last-child {
-    padding-bottom: 8rem;
+    padding-bottom: $padding-large;
   }
 }

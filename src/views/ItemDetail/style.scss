@@ -1,3 +1,6 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
 .item-details {
   &__hero {
     position: relative;
@@ -5,9 +8,12 @@
 
   &__lists {
     position: relative;
-    padding: 0 8rem;
+    padding: 0 $padding-large;
+    @include respond(phone) {
+      padding: 0 4rem;
+    }
     &:last-child {
-      padding-bottom: 8rem;
+      padding-bottom: $padding-large;
     }
   }
 }

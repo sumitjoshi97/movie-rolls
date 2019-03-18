@@ -1,8 +1,10 @@
+@import "../../sass/variables.scss";
+
 .search-results {
-  padding: 10rem 8rem 0 8rem;
+  padding: $padding-all;
 
   &__header {
-    font-size: 3rem;
+    font-size: $font-header;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;
@@ -10,7 +12,7 @@
 
   &__list {
     &:last-child {
-      padding-bottom: 8rem;
+      padding-bottom: $padding-large;
     }
   }
 }

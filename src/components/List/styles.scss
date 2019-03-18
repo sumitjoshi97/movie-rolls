@@ -1,6 +1,8 @@
+@import "../../sass/variables.scss";
+
 .list {
   padding-top: 6rem;
-  background-color: #121212;
+  background-color: $color-background;
   &__header {
     text-transform: capitalize;
     padding-bottom: 1rem;
@@ -31,7 +33,6 @@
 
   &__img {
     height: 18rem;
-    background: #000;
     width: 14rem;
   }
 
@@ -43,7 +44,7 @@
 
   &__name {
     padding-top: 1rem;
-    color: #fff;
+    color: $color-white;
 
     &__sub {
       color: #888888;

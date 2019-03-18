@@ -1,6 +1,13 @@
-.watch-later {
-  padding: 10rem 8rem 0 8rem;
+@import "../../sass/variables";
+@import "../../sass/mixin";
 
+.watch-later {
+  padding: $padding-all;
+
+  @include respond(phone) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   &__header {
     font-size: 3rem;
     text-transform: uppercase;

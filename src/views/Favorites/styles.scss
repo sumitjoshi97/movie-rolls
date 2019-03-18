@@ -1,8 +1,15 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
 .favorite {
-  padding: 10rem 8rem 0 8rem;
+  padding: $padding-all;
+
+  @include respond(phone) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 
   &__header {
-    font-size: 3rem;
+    font-size: $font-header;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;

@@ -1,3 +1,6 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixin";
+
 .profile-btn {
   position: absolute;
   right: 8rem;
@@ -6,6 +9,10 @@
   background: transparent;
   border: none;
   cursor: pointer;
+
+  @include respond(phone) {
+    right: 4rem;
+  }
 
   &:focus,
   &:active {
@@ -24,7 +31,11 @@
     position: absolute;
     top: 8rem;
     right: 8rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(#fff, 0.5);
+
+    @include respond(phone) {
+      right: 4rem;
+    }
 
     &__favorite,
     &__watch,
@@ -50,7 +61,7 @@
 
     &__logout {
       border-bottom: none;
-      background: #212121;
+      background: $color-dark-primary;
     }
   }
 }

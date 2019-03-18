@@ -1,3 +1,4 @@
+@import "../../sass/variables.scss";
 .auth-form {
   width: 46rem;
   display: flex;
@@ -13,7 +14,7 @@
     justify-content: center;
     width: 30rem;
     padding-bottom: 1.4rem;
-    color: #ff0000;
+    color: $color-primary;
     font-weight: 700;
 
     &__main {
