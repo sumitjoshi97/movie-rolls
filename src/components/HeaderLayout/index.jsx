@@ -45,7 +45,6 @@ export default class HeaderLayout extends Component {
           <Route path='/profile/favorites' component={Favorites} />
           <Route path='/profile/watch-later' component={WatchLaters} />
           <Route path='/' component={Home} />
-          <Route render={() => <div>loading...</div>} />
         </Switch>
         <Footer />
       </>
