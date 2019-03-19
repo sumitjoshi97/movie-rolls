@@ -1,0 +1,52 @@
+.phone-search {
+  &__backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+    background: #1b1b1b;
+    z-index: 100;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 4rem;
+    &__input {
+      font-size: 1.6rem;
+      color: #2a2a2a;
+      width: 100%;
+      padding: 1rem 4.8rem 1rem 2rem;
+      background: #e6e6e6;
+      border: none;
+      border-radius: 100px;
+      transition: all 0.2s;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__btn {
+      background: transparent;
+      border: none;
+      display: flex;
+      position: absolute;
+      right: 5rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:focus,
+      &:active {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}

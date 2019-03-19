@@ -23,7 +23,6 @@
     @include respond(phone) {
       padding: 0 4rem;
       flex-direction: column;
-      // align-items: center;
     }
 
     &__img {

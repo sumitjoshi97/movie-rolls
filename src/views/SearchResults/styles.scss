@@ -1,7 +1,13 @@
-@import "../../sass/variables.scss";
+@import "../../sass/variables";
+@import "../../sass/mixin";
 
 .search-results {
   padding: $padding-all;
+
+  @include respond(phone) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 
   &__header {
     font-size: $font-header;

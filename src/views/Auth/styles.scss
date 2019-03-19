@@ -1,6 +1,23 @@
+@import "../../sass/variables";
+
 .auth {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   height: 100vh;
+  background: url(../../assets/login_backdrop.jpg);
+  background-size: cover;
+  background-position: center;
+
+  &__logo {
+    position: absolute;
+    top: 8rem;
+    letter-spacing: 2px;
+    color: $color-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+  }
 }
