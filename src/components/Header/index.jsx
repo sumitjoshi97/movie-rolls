@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import Search from './Search'
+import PhoneSearch from './PhoneSearch'
 import Profile from './Profile'
 
 import { logout } from '../../actions'
 
 import './styles.scss'
 
-class Header extends Component {
+class Header extends PureComponent {
   static propsTypes = {
     logout: PropTypes.func.isRequired,
     userId: PropTypes.string
@@ -18,7 +19,25 @@ class Header extends Component {
 
   state = {
     text: '',
-    search: false
+    search: false,
+    size: 'wide'
+  }
+
+  componentDidMount() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize)
+  }
+
+  onResize = () => {
+    if (window.innerWidth <= 600) {
+      this.setState({ size: 'phone' })
+    } else {
+      this.setState({ size: 'wide' })
+    }
+    this.forceUpdate()
   }
 
   handleInput = e => {
@@ -44,6 +63,7 @@ class Header extends Component {
 
   render() {
     const isAuth = this.props.userId
+
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
         <ul className='header__left'>
@@ -52,12 +72,21 @@ class Header extends Component {
           </li>
 
           <li className='header__left__search'>
-            <Search
-              value={this.state.text}
-              isActive={this.state.search}
-              handleInput={this.handleInput}
-              handleSearch={this.handleSearch}
-            />
+            {this.state.size === 'wide' ? (
+              <Search
+                value={this.state.text}
+                isActive={this.state.search}
+                handleInput={this.handleInput}
+                handleSearch={this.handleSearch}
+              />
+            ) : (
+              <PhoneSearch
+                value={this.state.text}
+                isActive={this.state.search}
+                handleInput={this.handleInput}
+                handleSearch={this.handleSearch}
+              />
+            )}
           </li>
 
           <li className='header__left__browse'>
