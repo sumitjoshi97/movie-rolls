@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import Layout from '../components/Layout'
-import HeaderLayout from '../components/HeaderLayout'
+import Loading from '../components/Loading'
 
+import routes from './routes'
 import * as actions from '../actions'
 
 class App extends Component {
@@ -25,8 +25,17 @@ class App extends Component {
         {this.fetchLists()}
         <Router>
           <Switch>
-            <Route path='/auth' component={Layout} />
-            <Route path='/' component={HeaderLayout} />
+            {routes.map(route => (
+              <Route
+                key={route.path}
+                path={route.path}
+                render={() => (
+                  <Suspense fallback={<Loading />}>
+                    <route.component />
+                  </Suspense>
+                )}
+              />
+            ))}
           </Switch>
         </Router>
       </div>
