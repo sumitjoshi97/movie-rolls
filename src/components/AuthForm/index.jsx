@@ -58,10 +58,6 @@ class AuthForm extends Component {
     const { active } = this.state
     return (
       <div className='auth-form'>
-        <div className='auth-form__logo'>
-          <span className='auth-form__logo__main'>M</span>
-          <span className='auth-form__logo__sub'>r</span>
-        </div>
         <div className='auth-form__header'>
           <h3>{active === 'login' ? 'Log in' : 'Sign up'} to see more</h3>
         </div>

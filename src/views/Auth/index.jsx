@@ -19,6 +19,8 @@ class Auth extends Component {
 
     return (
       <div className='auth'>
+        <div className='auth__logo'>movie rolls</div>
+
         {isRedirect}
         <AuthForm />
       </div>
