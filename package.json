@@ -2,6 +2,7 @@
   "name": "movie-rolls",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sumitjoshi97.github.io/movie-rolls",
   "dependencies": {
     "axios": "^0.18.0",
     "firebase": "^5.8.5",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
