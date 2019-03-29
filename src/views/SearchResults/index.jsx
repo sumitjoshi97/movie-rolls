@@ -57,7 +57,12 @@ class SearchResults extends Component {
 
     return (
       <div className='search-results'>
-        <h2 className='search-results__header'>Search Results</h2>
+        <div className='search-results__header'>
+          <h2 className='search-results__header__primary'>Search Results</h2>
+          <h4 className='search-results__header__secondary'>
+            {this.props.match.params.searchQuery}
+          </h4>
+        </div>
         <div className='search-results__list'>
           {this.props.searchResults ? this.renderResults() : searchError}
         </div>
