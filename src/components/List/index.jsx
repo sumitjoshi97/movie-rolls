@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import Slider from 'react-slick'
+import PropTypes from 'prop-types'
 
 import ListItem from './ListItem'
 import CastItem from './CastItem'
@@ -10,6 +11,11 @@ import PrevArrow from '../Arrows/Prev'
 import './styles.scss'
 
 export default class List extends PureComponent {
+  static propTypes = {
+    type: PropTypes.string,
+    items: PropTypes.array
+  }
+
   renderList = () => {
     const { type, items } = this.props
 
