@@ -54,6 +54,7 @@ class SearchResults extends Component {
 
   render() {
     const searchError = <h2>Sorry, no search results found</h2>
+    const { searchResults } = this.props
 
     return (
       <div className='search-results'>
@@ -64,7 +65,9 @@ class SearchResults extends Component {
           </h4>
         </div>
         <div className='search-results__list'>
-          {this.props.searchResults ? this.renderResults() : searchError}
+          {searchResults && searchResults.results.length > 0
+            ? this.renderResults()
+            : searchError}
         </div>
       </div>
     )
