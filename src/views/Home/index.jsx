@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 
-import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import Nav from '../../components/Nav'
 import List from '../../components/List'
@@ -32,7 +31,7 @@ const sliderOptions = {
   ]
 }
 
-class Home extends Component {
+export class Home extends Component {
   static propTypes = {
     currentMovies: PropTypes.object,
     popularMovies: PropTypes.object,
@@ -74,7 +73,11 @@ class Home extends Component {
 
     let renderData = []
 
-    if (currentMovies && currentShows) {
+    if (
+      currentMovies &&
+      currentMovies.results.length > 0 &&
+      (currentShows && currentShows.results.length > 0)
+    ) {
       renderData.push(
         { data: currentMovies.results[0], type: 'movie' },
         { data: currentMovies.results[1], type: 'movie' },
