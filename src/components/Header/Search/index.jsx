@@ -16,12 +16,13 @@ const styles = {
   }
 }
 
-const Search = ({ isActive, ...props }) => (
+const Search = ({ isActive, value, ...props }) => (
   <div className='search'>
     <input
       type='text'
       className='search__input'
       style={isActive ? styles.inputStyle : null}
+      value={value}
       onChange={props.handleInput}
     />
     <button
