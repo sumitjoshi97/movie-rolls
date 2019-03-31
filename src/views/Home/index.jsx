@@ -167,8 +167,6 @@ class Home extends Component {
   render() {
     return (
       <div className='home'>
-        <Header />
-
         <div className='home__hero'>
           <Slider {...sliderOptions}>{this.renderHero()}</Slider>
           <Nav
