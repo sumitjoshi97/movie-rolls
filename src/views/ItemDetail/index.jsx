@@ -18,9 +18,12 @@ class ItemDetail extends Component {
     item: PropTypes.object,
     credits: PropTypes.object,
     videos: PropTypes.object,
+    similar: PropTypes.object,
     fetchQueryItem: PropTypes.func.isRequired,
     fetchQueryItemDetails: PropTypes.func.isRequired,
-    fetchQueryItemVideos: PropTypes.func.isRequired
+    fetchQueryItemVideos: PropTypes.func.isRequired,
+    fetchSimilarItems: PropTypes.func.isRequired,
+    setItemClear: PropTypes.func.isRequired
   }
 
   state = {

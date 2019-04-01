@@ -10,8 +10,7 @@ class AuthForm extends Component {
   static propTypes = {
     signupUser: PropTypes.func,
     loginUserWithEmail: PropTypes.func,
-    loginUserWithSocial: PropTypes.func,
-    fetchUser: PropTypes.func
+    loginUserWithSocial: PropTypes.func
   }
 
   state = {

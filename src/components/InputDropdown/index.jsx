@@ -6,9 +6,10 @@ import './styles.scss'
 
 export default class InputDropdown extends PureComponent {
   static propTypes = {
+    name: PropTypes.string.isRequired,
     options: PropTypes.array,
     value: PropTypes.object,
-    handleDropdown: PropTypes.func
+    handleDropdown: PropTypes.func.isRequired
   }
 
   state = {

@@ -12,7 +12,8 @@ import './styles.scss'
 
 export default class List extends PureComponent {
   static propTypes = {
-    type: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     items: PropTypes.array
   }
 
