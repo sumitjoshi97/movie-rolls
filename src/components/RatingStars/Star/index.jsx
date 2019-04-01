@@ -28,5 +28,5 @@ export default class Star extends Component {
 }
 
 const options = {
-  color: '#ff0000'
+  color: '#ff1e1e'
 }
