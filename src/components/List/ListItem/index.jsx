@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import * as actions from '../../../actions'
 
-const ListItem = ({ pageId, type, poster, name, setType }) => (
+export const ListItem = ({ pageId, type, poster, name, setType }) => (
   <div className='list-item'>
     <Link to={`/details/${pageId}`} onClick={() => setType(type)}>
       <img

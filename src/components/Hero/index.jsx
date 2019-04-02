@@ -9,8 +9,9 @@ import * as actions from '../../actions'
 
 import './styles.scss'
 
-class Hero extends PureComponent {
+export class Hero extends PureComponent {
   static propTypes = {
+    type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     poster: PropTypes.string,
     backdrop: PropTypes.string,
@@ -210,11 +211,11 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  addToList: (list, data, userIdId) =>
-    dispatch(actions.addToList(list, data, userIdId)),
+  addToList: (list, data, userId) =>
+    dispatch(actions.addToList(list, data, userId)),
 
-  removeFromList: (list, itemId, userIdId) =>
-    dispatch(actions.removeFromList(list, itemId, userIdId)),
+  removeFromList: (list, itemId, userId) =>
+    dispatch(actions.removeFromList(list, itemId, userId)),
 
   setRedirectPath: path => dispatch(actions.setRedirectPath(path)),
 
