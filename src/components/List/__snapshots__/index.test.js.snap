@@ -1,0 +1,386 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list unit tests should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <List
+    items={
+      Array [
+        Object {
+          "id": "01",
+          "poster_path": "test_path.png",
+          "title": "test",
+        },
+      ]
+    }
+    name="test title"
+    type="movie"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="list__header"
+        >
+          test title
+        </h2>,
+        <Slider
+          arrows={true}
+          dots={false}
+          infinite={false}
+          nextArrow={<NextArrow />}
+          prevArrow={<PrevArrow />}
+          responsive={
+            Array [
+              Object {
+                "breakpoint": 1440,
+                "settings": Object {
+                  "slidesToShow": 6,
+                },
+              },
+              Object {
+                "breakpoint": 1200,
+                "settings": Object {
+                  "slidesToShow": 5,
+                },
+              },
+              Object {
+                "breakpoint": 1000,
+                "settings": Object {
+                  "slidesToShow": 5,
+                },
+              },
+              Object {
+                "breakpoint": 680,
+                "settings": Object {
+                  "slidesToShow": 4,
+                },
+              },
+              Object {
+                "breakpoint": 570,
+                "settings": Object {
+                  "slidesToShow": 3,
+                },
+              },
+              Object {
+                "breakpoint": 480,
+                "settings": Object {
+                  "slidesToShow": 2,
+                },
+              },
+            ]
+          }
+          slidesToShow={7}
+          speed={400}
+          swipeToSlide={true}
+        >
+          <Connect(ListItem)
+            name="test"
+            pageId="01"
+            poster="test_path.png"
+            type="movie"
+          />
+        </Slider>,
+      ],
+      "className": "list",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test title",
+          "className": "list__header",
+        },
+        "ref": null,
+        "rendered": "test title",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "arrows": true,
+          "children": Array [
+            <Connect(ListItem)
+              name="test"
+              pageId="01"
+              poster="test_path.png"
+              type="movie"
+            />,
+          ],
+          "dots": false,
+          "infinite": false,
+          "nextArrow": <NextArrow />,
+          "prevArrow": <PrevArrow />,
+          "responsive": Array [
+            Object {
+              "breakpoint": 1440,
+              "settings": Object {
+                "slidesToShow": 6,
+              },
+            },
+            Object {
+              "breakpoint": 1200,
+              "settings": Object {
+                "slidesToShow": 5,
+              },
+            },
+            Object {
+              "breakpoint": 1000,
+              "settings": Object {
+                "slidesToShow": 5,
+              },
+            },
+            Object {
+              "breakpoint": 680,
+              "settings": Object {
+                "slidesToShow": 4,
+              },
+            },
+            Object {
+              "breakpoint": 570,
+              "settings": Object {
+                "slidesToShow": 3,
+              },
+            },
+            Object {
+              "breakpoint": 480,
+              "settings": Object {
+                "slidesToShow": 2,
+              },
+            },
+          ],
+          "slidesToShow": 7,
+          "speed": 400,
+          "swipeToSlide": true,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "movie01",
+            "nodeType": "class",
+            "props": Object {
+              "name": "test",
+              "pageId": "01",
+              "poster": "test_path.png",
+              "type": "movie",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="list__header"
+          >
+            test title
+          </h2>,
+          <Slider
+            arrows={true}
+            dots={false}
+            infinite={false}
+            nextArrow={<NextArrow />}
+            prevArrow={<PrevArrow />}
+            responsive={
+              Array [
+                Object {
+                  "breakpoint": 1440,
+                  "settings": Object {
+                    "slidesToShow": 6,
+                  },
+                },
+                Object {
+                  "breakpoint": 1200,
+                  "settings": Object {
+                    "slidesToShow": 5,
+                  },
+                },
+                Object {
+                  "breakpoint": 1000,
+                  "settings": Object {
+                    "slidesToShow": 5,
+                  },
+                },
+                Object {
+                  "breakpoint": 680,
+                  "settings": Object {
+                    "slidesToShow": 4,
+                  },
+                },
+                Object {
+                  "breakpoint": 570,
+                  "settings": Object {
+                    "slidesToShow": 3,
+                  },
+                },
+                Object {
+                  "breakpoint": 480,
+                  "settings": Object {
+                    "slidesToShow": 2,
+                  },
+                },
+              ]
+            }
+            slidesToShow={7}
+            speed={400}
+            swipeToSlide={true}
+          >
+            <Connect(ListItem)
+              name="test"
+              pageId="01"
+              poster="test_path.png"
+              type="movie"
+            />
+          </Slider>,
+        ],
+        "className": "list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test title",
+            "className": "list__header",
+          },
+          "ref": null,
+          "rendered": "test title",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "arrows": true,
+            "children": Array [
+              <Connect(ListItem)
+                name="test"
+                pageId="01"
+                poster="test_path.png"
+                type="movie"
+              />,
+            ],
+            "dots": false,
+            "infinite": false,
+            "nextArrow": <NextArrow />,
+            "prevArrow": <PrevArrow />,
+            "responsive": Array [
+              Object {
+                "breakpoint": 1440,
+                "settings": Object {
+                  "slidesToShow": 6,
+                },
+              },
+              Object {
+                "breakpoint": 1200,
+                "settings": Object {
+                  "slidesToShow": 5,
+                },
+              },
+              Object {
+                "breakpoint": 1000,
+                "settings": Object {
+                  "slidesToShow": 5,
+                },
+              },
+              Object {
+                "breakpoint": 680,
+                "settings": Object {
+                  "slidesToShow": 4,
+                },
+              },
+              Object {
+                "breakpoint": 570,
+                "settings": Object {
+                  "slidesToShow": 3,
+                },
+              },
+              Object {
+                "breakpoint": 480,
+                "settings": Object {
+                  "slidesToShow": 2,
+                },
+              },
+            ],
+            "slidesToShow": 7,
+            "speed": 400,
+            "swipeToSlide": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "movie01",
+              "nodeType": "class",
+              "props": Object {
+                "name": "test",
+                "pageId": "01",
+                "poster": "test_path.png",
+                "type": "movie",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
