@@ -6,7 +6,7 @@ import * as actions from '../../actions'
 
 import './styles.scss'
 
-class AuthForm extends Component {
+export class AuthForm extends Component {
   static propTypes = {
     signupUser: PropTypes.func,
     loginUserWithEmail: PropTypes.func,
