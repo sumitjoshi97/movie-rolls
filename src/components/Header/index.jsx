@@ -11,7 +11,7 @@ import { logout } from '../../actions'
 
 import './styles.scss'
 
-class Header extends PureComponent {
+export class Header extends PureComponent {
   static propsTypes = {
     logout: PropTypes.func.isRequired,
     userId: PropTypes.string

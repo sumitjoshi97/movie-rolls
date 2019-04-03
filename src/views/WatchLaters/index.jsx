@@ -6,7 +6,7 @@ import UserList from '../../components/UserList'
 
 import './styles.scss'
 
-class WatchLaters extends Component {
+export class WatchLaters extends Component {
   static propTypes = {
     watch: PropTypes.object
   }

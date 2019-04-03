@@ -6,7 +6,7 @@ import AuthForm from '../../components/AuthForm'
 
 import './styles.scss'
 
-class Auth extends Component {
+export class Auth extends Component {
   static propTypes = {
     isAuth: PropTypes.string,
     redirectPath: PropTypes.string

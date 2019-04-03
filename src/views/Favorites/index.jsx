@@ -6,7 +6,7 @@ import UserList from '../../components/UserList'
 
 import './styles.scss'
 
-class Favorites extends Component {
+export class Favorites extends Component {
   static propTypes = {
     favorites: PropTypes.object
   }
