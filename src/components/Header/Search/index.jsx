@@ -22,6 +22,7 @@ const Search = ({ isActive, value, ...props }) => (
       type='text'
       className='search__input'
       style={isActive ? styles.inputStyle : null}
+      placeholder='Search movies, tv shows'
       value={value}
       onChange={props.handleInput}
     />
