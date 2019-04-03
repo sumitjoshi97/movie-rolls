@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import './styles.scss'
 
-const Header = ({ isAuth, profileURL, ...props }) => {
+const Profile = ({ isAuth, profileURL, ...props }) => {
   const [hidden, setHidden] = useState(true)
 
   return (
@@ -55,10 +55,10 @@ const Header = ({ isAuth, profileURL, ...props }) => {
   )
 }
 
-Header.propTypes = {
+Profile.propTypes = {
   isAuth: PropTypes.string,
   profileURL: PropTypes.string,
   logout: PropTypes.func
 }
 
-export default Header
+export default Profile
