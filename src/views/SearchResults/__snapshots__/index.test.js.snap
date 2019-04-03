@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults component unit tests when search results are not null should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchResults
+    getSearchResults={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "test",
+          ],
+          Array [
+            "test",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    match={
+      Object {
+        "params": Object {
+          "searchQuery": "test",
+        },
+      }
+    }
+    searchResults={
+      Object {
+        "results": Array [
+          Object {
+            "id": "0",
+            "media_type": "movie",
+          },
+          Object {
+            "id": "0",
+            "media_type": "tv",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="search-results__header"
+        >
+          <h2
+            className="search-results__header__primary"
+          >
+            Search Results
+          </h2>
+          <h4
+            className="search-results__header__secondary"
+          >
+            test
+          </h4>
+        </div>,
+        <div
+          className="search-results__list"
+        >
+          <React.Fragment>
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "movie",
+                  },
+                ]
+              }
+              name="Movies"
+              type="movie"
+            />
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "tv",
+                  },
+                ]
+              }
+              name="TV Shows"
+              type="tv"
+            />
+          </React.Fragment>
+        </div>,
+      ],
+      "className": "search-results",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="search-results__header__primary"
+            >
+              Search Results
+            </h2>,
+            <h4
+              className="search-results__header__secondary"
+            >
+              test
+            </h4>,
+          ],
+          "className": "search-results__header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Search Results",
+              "className": "search-results__header__primary",
+            },
+            "ref": null,
+            "rendered": "Search Results",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "test",
+              "className": "search-results__header__secondary",
+            },
+            "ref": null,
+            "rendered": "test",
+            "type": "h4",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <React.Fragment>
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "movie",
+                  },
+                ]
+              }
+              name="Movies"
+              type="movie"
+            />
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "tv",
+                  },
+                ]
+              }
+              name="TV Shows"
+              type="tv"
+            />
+          </React.Fragment>,
+          "className": "search-results__list",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "movie",
+                    },
+                  ]
+                }
+                name="Movies"
+                type="movie"
+              />,
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "tv",
+                    },
+                  ]
+                }
+                name="TV Shows"
+                type="tv"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "items": Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "movie",
+                  },
+                ],
+                "name": "Movies",
+                "type": "movie",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "items": Array [
+                  Object {
+                    "id": "0",
+                    "media_type": "tv",
+                  },
+                ],
+                "name": "TV Shows",
+                "type": "tv",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="search-results__header"
+          >
+            <h2
+              className="search-results__header__primary"
+            >
+              Search Results
+            </h2>
+            <h4
+              className="search-results__header__secondary"
+            >
+              test
+            </h4>
+          </div>,
+          <div
+            className="search-results__list"
+          >
+            <React.Fragment>
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "movie",
+                    },
+                  ]
+                }
+                name="Movies"
+                type="movie"
+              />
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "tv",
+                    },
+                  ]
+                }
+                name="TV Shows"
+                type="tv"
+              />
+            </React.Fragment>
+          </div>,
+        ],
+        "className": "search-results",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="search-results__header__primary"
+              >
+                Search Results
+              </h2>,
+              <h4
+                className="search-results__header__secondary"
+              >
+                test
+              </h4>,
+            ],
+            "className": "search-results__header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Search Results",
+                "className": "search-results__header__primary",
+              },
+              "ref": null,
+              "rendered": "Search Results",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test",
+                "className": "search-results__header__secondary",
+              },
+              "ref": null,
+              "rendered": "test",
+              "type": "h4",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <React.Fragment>
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "movie",
+                    },
+                  ]
+                }
+                name="Movies"
+                type="movie"
+              />
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "tv",
+                    },
+                  ]
+                }
+                name="TV Shows"
+                type="tv"
+              />
+            </React.Fragment>,
+            "className": "search-results__list",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <List
+                  items={
+                    Array [
+                      Object {
+                        "id": "0",
+                        "media_type": "movie",
+                      },
+                    ]
+                  }
+                  name="Movies"
+                  type="movie"
+                />,
+                <List
+                  items={
+                    Array [
+                      Object {
+                        "id": "0",
+                        "media_type": "tv",
+                      },
+                    ]
+                  }
+                  name="TV Shows"
+                  type="tv"
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "items": Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "movie",
+                    },
+                  ],
+                  "name": "Movies",
+                  "type": "movie",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "items": Array [
+                    Object {
+                      "id": "0",
+                      "media_type": "tv",
+                    },
+                  ],
+                  "name": "TV Shows",
+                  "type": "tv",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
