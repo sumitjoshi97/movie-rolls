@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Details unit tests should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ItemDetail
+    credits={
+      Object {
+        "cast": Array [
+          Object {
+            "id": "01",
+          },
+        ],
+      }
+    }
+    fetchQueryItem={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "movie",
+            "01",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    fetchQueryItemDetails={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "movie",
+            "01",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    fetchQueryItemVideos={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "movie",
+            "01",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    fetchSimilarItems={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            "movie",
+            "01",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    item={
+      Object {
+        "adult": false,
+        "backdrop_path": null,
+        "id": "01",
+        "poster_path": null,
+        "release_date": "2019-15-1",
+        "summary": "test summary",
+        "title": "test",
+        "type": "movie",
+        "vote_average": 4,
+      }
+    }
+    match={
+      Object {
+        "params": Object {
+          "itemId": "01",
+        },
+      }
+    }
+    setItemClear={[MockFunction]}
+    similar={
+      Object {
+        "results": Array [
+          Object {
+            "id": "02",
+          },
+        ],
+      }
+    }
+    type="movie"
+    videos={null}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="item-details__hero"
+        >
+          <Connect(withRouter(Hero))
+            adult={false}
+            backdrop={null}
+            pageId="01"
+            poster={null}
+            rating={4}
+            title="test"
+            type="movie"
+            year="2019"
+          />
+          <Nav
+            handleNav={[Function]}
+            options={
+              Array [
+                Object {
+                  "name": "overview",
+                  "type": "overview",
+                },
+                Object {
+                  "name": "more like this",
+                  "type": "similar",
+                },
+              ]
+            }
+          />
+        </div>,
+        <div
+          className="item-details__lists"
+        >
+          <React.Fragment>
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "01",
+                  },
+                ]
+              }
+              name="Cast"
+              type="cast"
+            />
+          </React.Fragment>
+        </div>,
+      ],
+      "className": "item-details",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Connect(withRouter(Hero))
+              adult={false}
+              backdrop={null}
+              pageId="01"
+              poster={null}
+              rating={4}
+              title="test"
+              type="movie"
+              year="2019"
+            />,
+            <Nav
+              handleNav={[Function]}
+              options={
+                Array [
+                  Object {
+                    "name": "overview",
+                    "type": "overview",
+                  },
+                  Object {
+                    "name": "more like this",
+                    "type": "similar",
+                  },
+                ]
+              }
+            />,
+          ],
+          "className": "item-details__hero",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "01",
+            "nodeType": "class",
+            "props": Object {
+              "adult": false,
+              "backdrop": null,
+              "pageId": "01",
+              "poster": null,
+              "rating": 4,
+              "summary": undefined,
+              "title": "test",
+              "type": "movie",
+              "year": "2019",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "handleNav": [Function],
+              "options": Array [
+                Object {
+                  "name": "overview",
+                  "type": "overview",
+                },
+                Object {
+                  "name": "more like this",
+                  "type": "similar",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <React.Fragment>
+            <List
+              items={
+                Array [
+                  Object {
+                    "id": "01",
+                  },
+                ]
+              }
+              name="Cast"
+              type="cast"
+            />
+          </React.Fragment>,
+          "className": "item-details__lists",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "01",
+                    },
+                  ]
+                }
+                name="Cast"
+                type="cast"
+              />,
+              null,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "items": Array [
+                  Object {
+                    "id": "01",
+                  },
+                ],
+                "name": "Cast",
+                "type": "cast",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            null,
+          ],
+          "type": Symbol(react.fragment),
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="item-details__hero"
+          >
+            <Connect(withRouter(Hero))
+              adult={false}
+              backdrop={null}
+              pageId="01"
+              poster={null}
+              rating={4}
+              title="test"
+              type="movie"
+              year="2019"
+            />
+            <Nav
+              handleNav={[Function]}
+              options={
+                Array [
+                  Object {
+                    "name": "overview",
+                    "type": "overview",
+                  },
+                  Object {
+                    "name": "more like this",
+                    "type": "similar",
+                  },
+                ]
+              }
+            />
+          </div>,
+          <div
+            className="item-details__lists"
+          >
+            <React.Fragment>
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "01",
+                    },
+                  ]
+                }
+                name="Cast"
+                type="cast"
+              />
+            </React.Fragment>
+          </div>,
+        ],
+        "className": "item-details",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Connect(withRouter(Hero))
+                adult={false}
+                backdrop={null}
+                pageId="01"
+                poster={null}
+                rating={4}
+                title="test"
+                type="movie"
+                year="2019"
+              />,
+              <Nav
+                handleNav={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "name": "overview",
+                      "type": "overview",
+                    },
+                    Object {
+                      "name": "more like this",
+                      "type": "similar",
+                    },
+                  ]
+                }
+              />,
+            ],
+            "className": "item-details__hero",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "01",
+              "nodeType": "class",
+              "props": Object {
+                "adult": false,
+                "backdrop": null,
+                "pageId": "01",
+                "poster": null,
+                "rating": 4,
+                "summary": undefined,
+                "title": "test",
+                "type": "movie",
+                "year": "2019",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleNav": [Function],
+                "options": Array [
+                  Object {
+                    "name": "overview",
+                    "type": "overview",
+                  },
+                  Object {
+                    "name": "more like this",
+                    "type": "similar",
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <React.Fragment>
+              <List
+                items={
+                  Array [
+                    Object {
+                      "id": "01",
+                    },
+                  ]
+                }
+                name="Cast"
+                type="cast"
+              />
+            </React.Fragment>,
+            "className": "item-details__lists",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <List
+                  items={
+                    Array [
+                      Object {
+                        "id": "01",
+                      },
+                    ]
+                  }
+                  name="Cast"
+                  type="cast"
+                />,
+                null,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "items": Array [
+                    Object {
+                      "id": "01",
+                    },
+                  ],
+                  "name": "Cast",
+                  "type": "cast",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              null,
+            ],
+            "type": Symbol(react.fragment),
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
