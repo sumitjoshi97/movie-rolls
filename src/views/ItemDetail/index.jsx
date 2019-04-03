@@ -12,7 +12,7 @@ import * as actions from '../../actions'
 
 import './style.scss'
 
-class ItemDetail extends Component {
+export class ItemDetail extends Component {
   static propTypes = {
     type: PropTypes.string,
     item: PropTypes.object,
