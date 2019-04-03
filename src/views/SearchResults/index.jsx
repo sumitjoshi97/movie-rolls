@@ -8,7 +8,7 @@ import { getSearchResults } from '../../actions'
 
 import './styles.scss'
 
-class SearchResults extends Component {
+export class SearchResults extends Component {
   static propTypes = {
     searchResults: PropTypes.object,
     getSearchResults: PropTypes.func
@@ -53,7 +53,7 @@ class SearchResults extends Component {
   }
 
   render() {
-    const searchError = <h2>Sorry, no search results found</h2>
+    const searchError = <h2 className='sorry-text'>Sorry, no results found</h2>
     const { searchResults } = this.props
 
     return (
