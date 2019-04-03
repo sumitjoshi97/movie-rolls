@@ -16,11 +16,7 @@ export class Favorites extends Component {
       <div className='favorite'>
         <h2 className='favorite__header'>my favorites</h2>
         {this.props.favorite ? (
-          <UserList
-            list={this.props.favorite}
-            text='favorite'
-            history={this.props.history}
-          />
+          <UserList list={this.props.favorite} text='favorite' />
         ) : (
           <h2 className='sorry-text'>
             You don't have any yet, start adding now
