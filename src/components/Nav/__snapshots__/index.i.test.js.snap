@@ -1,0 +1,3693 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component integration tests should render properly 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <Nav
+    handleNav={[MockFunction]}
+    options={
+      Array [
+        Object {
+          "name": "type1",
+          "type": "type1",
+        },
+        Object {
+          "name": "type2",
+          "type": "type2",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": Nav {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 50,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 49,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "mode": 0,
+          "nextEffect": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 32,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                  Object {
+                    "handleNav": [MockFunction],
+                    "options": Array [
+                      Object {
+                        "name": "type1",
+                        "type": "type1",
+                      },
+                      Object {
+                        "name": "type2",
+                        "type": "type2",
+                      },
+                    ],
+                  }
+                }
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <nav
+                  class="nav"
+                >
+                  <div
+                    class="nav-item type1"
+                    style="border-bottom: 0.5rem solid #ff1e1e;"
+                  >
+                    type1
+                  </div>
+                  <div
+                    class="nav-item type2"
+                    style="border-bottom: 0.5rem solid transparent;"
+                  >
+                    type2
+                  </div>
+                </nav>
+              </div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 32,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                  Object {
+                    "handleNav": [MockFunction],
+                    "options": Array [
+                      Object {
+                        "name": "type1",
+                        "type": "type1",
+                      },
+                      Object {
+                        "name": "type2",
+                        "type": "type2",
+                      },
+                    ],
+                  }
+                }
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <nav
+                  class="nav"
+                >
+                  <div
+                    class="nav-item type1"
+                    style="border-bottom: 0.5rem solid #ff1e1e;"
+                  >
+                    type1
+                  </div>
+                  <div
+                    class="nav-item type2"
+                    style="border-bottom: 0.5rem solid transparent;"
+                  >
+                    type2
+                  </div>
+                </nav>
+              </div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 1,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "actualDuration": 0,
+        "actualStartTime": -1,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 51,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+            "lineNumber": 43,
+          },
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 52,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+              "lineNumber": 30,
+            },
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 54,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\NavItem\\\\index.jsx",
+                "lineNumber": 15,
+              },
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": null,
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": "div",
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": "type1",
+                "className": "nav-item type1",
+                "onClick": [Function],
+                "style": Object {
+                  "borderBottom": "0.5rem solid #ff1e1e",
+                },
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": "type1",
+                "className": "nav-item type1",
+                "onClick": [Function],
+                "style": Object {
+                  "borderBottom": "0.5rem solid #ff1e1e",
+                },
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": <div
+                class="nav-item type1"
+                style="border-bottom: 0.5rem solid #ff1e1e;"
+              >
+                type1
+              </div>,
+              "tag": 5,
+              "treeBaseDuration": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": "type1",
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "handleNav": [MockFunction],
+              "index": 0,
+              "isActive": true,
+              "name": "type1",
+              "setActive": [Function],
+              "type": "type1",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "handleNav": [MockFunction],
+              "index": 0,
+              "isActive": true,
+              "name": "type1",
+              "setActive": [Function],
+              "type": "type1",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseDuration": 0,
+            "sibling": FiberNode {
+              "_debugID": 53,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+                "lineNumber": 30,
+              },
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 55,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\NavItem\\\\index.jsx",
+                  "lineNumber": 15,
+                },
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": null,
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": "div",
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "type2",
+                  "className": "nav-item type2",
+                  "onClick": [Function],
+                  "style": Object {
+                    "borderBottom": "0.5rem solid transparent",
+                  },
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "type2",
+                  "className": "nav-item type2",
+                  "onClick": [Function],
+                  "style": Object {
+                    "borderBottom": "0.5rem solid transparent",
+                  },
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": <div
+                  class="nav-item type2"
+                  style="border-bottom: 0.5rem solid transparent;"
+                >
+                  type2
+                </div>,
+                "tag": 5,
+                "treeBaseDuration": 0,
+                "type": "div",
+                "updateQueue": null,
+              },
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 1,
+              "key": "type2",
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "handleNav": [MockFunction],
+                "index": 1,
+                "isActive": false,
+                "name": "type2",
+                "setActive": [Function],
+                "type": "type2",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "handleNav": [MockFunction],
+                "index": 1,
+                "isActive": false,
+                "name": "type2",
+                "setActive": [Function],
+                "type": "type2",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": null,
+              "tag": 0,
+              "treeBaseDuration": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "stateNode": null,
+            "tag": 0,
+            "treeBaseDuration": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 0,
+          "elementType": "nav",
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": Array [
+              <NavItem
+                handleNav={[MockFunction]}
+                index={0}
+                isActive={true}
+                name="type1"
+                setActive={[Function]}
+                type="type1"
+              />,
+              <NavItem
+                handleNav={[MockFunction]}
+                index={1}
+                isActive={false}
+                name="type2"
+                setActive={[Function]}
+                type="type2"
+              />,
+            ],
+            "className": "nav",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": Array [
+              <NavItem
+                handleNav={[MockFunction]}
+                index={0}
+                isActive={true}
+                name="type1"
+                setActive={[Function]}
+                type="type1"
+              />,
+              <NavItem
+                handleNav={[MockFunction]}
+                index={1}
+                isActive={false}
+                name="type2"
+                setActive={[Function]}
+                type="type2"
+              />,
+            ],
+            "className": "nav",
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": <nav
+            class="nav"
+          >
+            <div
+              class="nav-item type1"
+              style="border-bottom: 0.5rem solid #ff1e1e;"
+            >
+              type1
+            </div>
+            <div
+              class="nav-item type2"
+              style="border-bottom: 0.5rem solid transparent;"
+            >
+              type2
+            </div>
+          </nav>,
+          "tag": 5,
+          "treeBaseDuration": 0,
+          "type": "nav",
+          "updateQueue": null,
+        },
+        "childExpirationTime": 0,
+        "contextDependencies": null,
+        "effectTag": 1,
+        "elementType": [Function],
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "handleNav": [MockFunction],
+          "options": Array [
+            Object {
+              "name": "type1",
+              "type": "type1",
+            },
+            Object {
+              "name": "type2",
+              "type": "type2",
+            },
+          ],
+        },
+        "memoizedState": Object {
+          "isActive": Array [
+            true,
+            false,
+          ],
+        },
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "handleNav": [MockFunction],
+          "options": Array [
+            Object {
+              "name": "type1",
+              "type": "type1",
+            },
+            Object {
+              "name": "type2",
+              "type": "type2",
+            },
+          ],
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 49,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "mode": 0,
+          "nextEffect": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 32,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                  Object {
+                    "handleNav": [MockFunction],
+                    "options": Array [
+                      Object {
+                        "name": "type1",
+                        "type": "type1",
+                      },
+                      Object {
+                        "name": "type2",
+                        "type": "type2",
+                      },
+                    ],
+                  }
+                }
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <nav
+                  class="nav"
+                >
+                  <div
+                    class="nav-item type1"
+                    style="border-bottom: 0.5rem solid #ff1e1e;"
+                  >
+                    type1
+                  </div>
+                  <div
+                    class="nav-item type2"
+                    style="border-bottom: 0.5rem solid transparent;"
+                  >
+                    type2
+                  </div>
+                </nav>
+              </div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "handleNav": [MockFunction],
+              "options": Array [
+                Object {
+                  "name": "type1",
+                  "type": "type1",
+                },
+                Object {
+                  "name": "type2",
+                  "type": "type2",
+                },
+              ],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 0,
+              "elementType": null,
+              "expirationTime": 1073741823,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1073741823,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                        Object {
+                          "handleNav": [MockFunction],
+                          "options": Array [
+                            Object {
+                              "name": "type1",
+                              "type": "type1",
+                            },
+                            Object {
+                              "name": "type2",
+                              "type": "type2",
+                            },
+                          ],
+                        }
+                      }
+                    />,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 32,
+            "elementType": null,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                  Object {
+                    "handleNav": [MockFunction],
+                    "options": Array [
+                      Object {
+                        "name": "type1",
+                        "type": "type1",
+                      },
+                      Object {
+                        "name": "type2",
+                        "type": "type2",
+                      },
+                    ],
+                  }
+                }
+              />,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <nav
+                  class="nav"
+                >
+                  <div
+                    class="nav-item type1"
+                    style="border-bottom: 0.5rem solid #ff1e1e;"
+                  >
+                    type1
+                  </div>
+                  <div
+                    class="nav-item type2"
+                    style="border-bottom: 0.5rem solid transparent;"
+                  >
+                    type2
+                  </div>
+                </nav>
+              </div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "pingCache": null,
+              "timeoutHandle": -1,
+            },
+            "tag": 3,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 1,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseDuration": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 1,
+        "treeBaseDuration": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "props": Object {
+        "handleNav": [MockFunction],
+        "options": Array [
+          Object {
+            "name": "type1",
+            "type": "type1",
+          },
+          Object {
+            "name": "type2",
+            "type": "type2",
+          },
+        ],
+      },
+      "refs": Object {},
+      "renderNav": [Function],
+      "setActive": [Function],
+      "state": Object {
+        "isActive": Array [
+          true,
+          false,
+        ],
+      },
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "handleNav": [MockFunction],
+      "options": Array [
+        Object {
+          "name": "type1",
+          "type": "type1",
+        },
+        Object {
+          "name": "type2",
+          "type": "type2",
+        },
+      ],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <nav
+        class="nav"
+      >
+        <div
+          class="nav-item type1"
+          style="border-bottom: 0.5rem solid #ff1e1e;"
+        >
+          type1
+        </div>
+        <div
+          class="nav-item type2"
+          style="border-bottom: 0.5rem solid transparent;"
+        >
+          type2
+        </div>
+      </nav>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavItem
+            handleNav={[MockFunction]}
+            index={0}
+            isActive={true}
+            name="type1"
+            setActive={[Function]}
+            type="type1"
+          />,
+          <NavItem
+            handleNav={[MockFunction]}
+            index={1}
+            isActive={false}
+            name="type2"
+            setActive={[Function]}
+            type="type2"
+          />,
+        ],
+        "className": "nav",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "type1",
+          "nodeType": "function",
+          "props": Object {
+            "handleNav": [MockFunction],
+            "index": 0,
+            "isActive": true,
+            "name": "type1",
+            "setActive": [Function],
+            "type": "type1",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="nav-item type1"
+              style="border-bottom: 0.5rem solid #ff1e1e;"
+            >
+              type1
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "type1",
+              "className": "nav-item type1",
+              "onClick": [Function],
+              "style": Object {
+                "borderBottom": "0.5rem solid #ff1e1e",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              "type1",
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "type2",
+          "nodeType": "function",
+          "props": Object {
+            "handleNav": [MockFunction],
+            "index": 1,
+            "isActive": false,
+            "name": "type2",
+            "setActive": [Function],
+            "type": "type2",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="nav-item type2"
+              style="border-bottom: 0.5rem solid transparent;"
+            >
+              type2
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "type2",
+              "className": "nav-item type2",
+              "onClick": [Function],
+              "style": Object {
+                "borderBottom": "0.5rem solid transparent",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              "type2",
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": Nav {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 50,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 49,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "mode": 0,
+            "nextEffect": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 1073741823,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <nav
+                      class="nav"
+                    >
+                      <div
+                        class="nav-item type1"
+                        style="border-bottom: 0.5rem solid #ff1e1e;"
+                      >
+                        type1
+                      </div>
+                      <div
+                        class="nav-item type2"
+                        style="border-bottom: 0.5rem solid transparent;"
+                      >
+                        type2
+                      </div>
+                    </nav>
+                  </div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 32,
+              "elementType": null,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                      Object {
+                        "handleNav": [MockFunction],
+                        "options": Array [
+                          Object {
+                            "name": "type1",
+                            "type": "type1",
+                          },
+                          Object {
+                            "name": "type2",
+                            "type": "type2",
+                          },
+                        ],
+                      }
+                    }
+                  />,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 1073741823,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <nav
+                      class="nav"
+                    >
+                      <div
+                        class="nav-item type1"
+                        style="border-bottom: 0.5rem solid #ff1e1e;"
+                      >
+                        type1
+                      </div>
+                      <div
+                        class="nav-item type2"
+                        style="border-bottom: 0.5rem solid transparent;"
+                      >
+                        type2
+                      </div>
+                    </nav>
+                  </div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 32,
+              "elementType": null,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                      Object {
+                        "handleNav": [MockFunction],
+                        "options": Array [
+                          Object {
+                            "name": "type1",
+                            "type": "type1",
+                          },
+                          Object {
+                            "name": "type2",
+                            "type": "type2",
+                          },
+                        ],
+                      }
+                    }
+                  />,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "handleNav": [MockFunction],
+                  "options": Array [
+                    Object {
+                      "name": "type1",
+                      "type": "type1",
+                    },
+                    Object {
+                      "name": "type2",
+                      "type": "type2",
+                    },
+                  ],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "handleNav": [MockFunction],
+                  "options": Array [
+                    Object {
+                      "name": "type1",
+                      "type": "type1",
+                    },
+                    Object {
+                      "name": "type2",
+                      "type": "type2",
+                    },
+                  ],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 1,
+            "treeBaseDuration": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 51,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+              "lineNumber": 43,
+            },
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 52,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+                "lineNumber": 30,
+              },
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 54,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\NavItem\\\\index.jsx",
+                  "lineNumber": 15,
+                },
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": null,
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": "div",
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "type1",
+                  "className": "nav-item type1",
+                  "onClick": [Function],
+                  "style": Object {
+                    "borderBottom": "0.5rem solid #ff1e1e",
+                  },
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "type1",
+                  "className": "nav-item type1",
+                  "onClick": [Function],
+                  "style": Object {
+                    "borderBottom": "0.5rem solid #ff1e1e",
+                  },
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": <div
+                  class="nav-item type1"
+                  style="border-bottom: 0.5rem solid #ff1e1e;"
+                >
+                  type1
+                </div>,
+                "tag": 5,
+                "treeBaseDuration": 0,
+                "type": "div",
+                "updateQueue": null,
+              },
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 1,
+              "elementType": [Function],
+              "expirationTime": 0,
+              "firstEffect": null,
+              "index": 0,
+              "key": "type1",
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "handleNav": [MockFunction],
+                "index": 0,
+                "isActive": true,
+                "name": "type1",
+                "setActive": [Function],
+                "type": "type1",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "handleNav": [MockFunction],
+                "index": 0,
+                "isActive": true,
+                "name": "type1",
+                "setActive": [Function],
+                "type": "type1",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseDuration": 0,
+              "sibling": FiberNode {
+                "_debugID": 53,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\index.jsx",
+                  "lineNumber": 30,
+                },
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 55,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "D:\\\\web\\\\React\\\\movie-rolls\\\\src\\\\components\\\\Nav\\\\NavItem\\\\index.jsx",
+                    "lineNumber": 15,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
+                  "alternate": null,
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "contextDependencies": null,
+                  "effectTag": 0,
+                  "elementType": "div",
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "type2",
+                    "className": "nav-item type2",
+                    "onClick": [Function],
+                    "style": Object {
+                      "borderBottom": "0.5rem solid transparent",
+                    },
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "type2",
+                    "className": "nav-item type2",
+                    "onClick": [Function],
+                    "style": Object {
+                      "borderBottom": "0.5rem solid transparent",
+                    },
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseDuration": 0,
+                  "sibling": null,
+                  "stateNode": <div
+                    class="nav-item type2"
+                    style="border-bottom: 0.5rem solid transparent;"
+                  >
+                    type2
+                  </div>,
+                  "tag": 5,
+                  "treeBaseDuration": 0,
+                  "type": "div",
+                  "updateQueue": null,
+                },
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 1,
+                "elementType": [Function],
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 1,
+                "key": "type2",
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "handleNav": [MockFunction],
+                  "index": 1,
+                  "isActive": false,
+                  "name": "type2",
+                  "setActive": [Function],
+                  "type": "type2",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "handleNav": [MockFunction],
+                  "index": 1,
+                  "isActive": false,
+                  "name": "type2",
+                  "setActive": [Function],
+                  "type": "type2",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": null,
+                "tag": 0,
+                "treeBaseDuration": 0,
+                "type": [Function],
+                "updateQueue": null,
+              },
+              "stateNode": null,
+              "tag": 0,
+              "treeBaseDuration": 0,
+              "type": [Function],
+              "updateQueue": null,
+            },
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 0,
+            "elementType": "nav",
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <NavItem
+                  handleNav={[MockFunction]}
+                  index={0}
+                  isActive={true}
+                  name="type1"
+                  setActive={[Function]}
+                  type="type1"
+                />,
+                <NavItem
+                  handleNav={[MockFunction]}
+                  index={1}
+                  isActive={false}
+                  name="type2"
+                  setActive={[Function]}
+                  type="type2"
+                />,
+              ],
+              "className": "nav",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <NavItem
+                  handleNav={[MockFunction]}
+                  index={0}
+                  isActive={true}
+                  name="type1"
+                  setActive={[Function]}
+                  type="type1"
+                />,
+                <NavItem
+                  handleNav={[MockFunction]}
+                  index={1}
+                  isActive={false}
+                  name="type2"
+                  setActive={[Function]}
+                  type="type2"
+                />,
+              ],
+              "className": "nav",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": <nav
+              class="nav"
+            >
+              <div
+                class="nav-item type1"
+                style="border-bottom: 0.5rem solid #ff1e1e;"
+              >
+                type1
+              </div>
+              <div
+                class="nav-item type2"
+                style="border-bottom: 0.5rem solid transparent;"
+              >
+                type2
+              </div>
+            </nav>,
+            "tag": 5,
+            "treeBaseDuration": 0,
+            "type": "nav",
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "contextDependencies": null,
+          "effectTag": 1,
+          "elementType": [Function],
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "handleNav": [MockFunction],
+            "options": Array [
+              Object {
+                "name": "type1",
+                "type": "type1",
+              },
+              Object {
+                "name": "type2",
+                "type": "type2",
+              },
+            ],
+          },
+          "memoizedState": Object {
+            "isActive": Array [
+              true,
+              false,
+            ],
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "handleNav": [MockFunction],
+            "options": Array [
+              Object {
+                "name": "type1",
+                "type": "type1",
+              },
+              Object {
+                "name": "type2",
+                "type": "type2",
+              },
+            ],
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 49,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "contextDependencies": null,
+            "effectTag": 1,
+            "elementType": [Function],
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "mode": 0,
+            "nextEffect": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 1073741823,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <nav
+                      class="nav"
+                    >
+                      <div
+                        class="nav-item type1"
+                        style="border-bottom: 0.5rem solid #ff1e1e;"
+                      >
+                        type1
+                      </div>
+                      <div
+                        class="nav-item type2"
+                        style="border-bottom: 0.5rem solid transparent;"
+                      >
+                        type2
+                      </div>
+                    </nav>
+                  </div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 32,
+              "elementType": null,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                      Object {
+                        "handleNav": [MockFunction],
+                        "options": Array [
+                          Object {
+                            "name": "type1",
+                            "type": "type1",
+                          },
+                          Object {
+                            "name": "type2",
+                            "type": "type2",
+                          },
+                        ],
+                      }
+                    }
+                  />,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "handleNav": [MockFunction],
+                "options": Array [
+                  Object {
+                    "name": "type1",
+                    "type": "type1",
+                  },
+                  Object {
+                    "name": "type2",
+                    "type": "type2",
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "contextDependencies": null,
+                "effectTag": 0,
+                "elementType": null,
+                "expirationTime": 1073741823,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <nav
+                      class="nav"
+                    >
+                      <div
+                        class="nav-item type1"
+                        style="border-bottom: 0.5rem solid #ff1e1e;"
+                      >
+                        type1
+                      </div>
+                      <div
+                        class="nav-item type2"
+                        style="border-bottom: 0.5rem solid transparent;"
+                      >
+                        type2
+                      </div>
+                    </nav>
+                  </div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "pingCache": null,
+                  "timeoutHandle": -1,
+                },
+                "tag": 3,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1073741823,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                          Object {
+                            "handleNav": [MockFunction],
+                            "options": Array [
+                              Object {
+                                "name": "type1",
+                                "type": "type1",
+                              },
+                              Object {
+                                "name": "type2",
+                                "type": "type2",
+                              },
+                            ],
+                          }
+                        }
+                      />,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "contextDependencies": null,
+              "effectTag": 32,
+              "elementType": null,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                    Object {
+                      "handleNav": [MockFunction],
+                      "options": Array [
+                        Object {
+                          "name": "type1",
+                          "type": "type1",
+                        },
+                        Object {
+                          "name": "type2",
+                          "type": "type2",
+                        },
+                      ],
+                    }
+                  }
+                />,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <nav
+                    class="nav"
+                  >
+                    <div
+                      class="nav-item type1"
+                      style="border-bottom: 0.5rem solid #ff1e1e;"
+                    >
+                      type1
+                    </div>
+                    <div
+                      class="nav-item type2"
+                      style="border-bottom: 0.5rem solid transparent;"
+                    >
+                      type2
+                    </div>
+                  </nav>
+                </div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "pingCache": null,
+                "timeoutHandle": -1,
+              },
+              "tag": 3,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                      Object {
+                        "handleNav": [MockFunction],
+                        "options": Array [
+                          Object {
+                            "name": "type1",
+                            "type": "type1",
+                          },
+                          Object {
+                            "name": "type2",
+                            "type": "type2",
+                          },
+                        ],
+                      }
+                    }
+                  />,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "handleNav": [MockFunction],
+                  "options": Array [
+                    Object {
+                      "name": "type1",
+                      "type": "type1",
+                    },
+                    Object {
+                      "name": "type2",
+                      "type": "type2",
+                    },
+                  ],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "handleNav": [MockFunction],
+                  "options": Array [
+                    Object {
+                      "name": "type1",
+                      "type": "type1",
+                    },
+                    Object {
+                      "name": "type2",
+                      "type": "type2",
+                    },
+                  ],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 1,
+            "treeBaseDuration": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 1,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "props": Object {
+          "handleNav": [MockFunction],
+          "options": Array [
+            Object {
+              "name": "type1",
+              "type": "type1",
+            },
+            Object {
+              "name": "type2",
+              "type": "type2",
+            },
+          ],
+        },
+        "refs": Object {},
+        "renderNav": [Function],
+        "setActive": [Function],
+        "state": Object {
+          "isActive": Array [
+            true,
+            false,
+          ],
+        },
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "handleNav": [MockFunction],
+        "options": Array [
+          Object {
+            "name": "type1",
+            "type": "type1",
+          },
+          Object {
+            "name": "type2",
+            "type": "type2",
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <nav
+          class="nav"
+        >
+          <div
+            class="nav-item type1"
+            style="border-bottom: 0.5rem solid #ff1e1e;"
+          >
+            type1
+          </div>
+          <div
+            class="nav-item type2"
+            style="border-bottom: 0.5rem solid transparent;"
+          >
+            type2
+          </div>
+        </nav>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavItem
+              handleNav={[MockFunction]}
+              index={0}
+              isActive={true}
+              name="type1"
+              setActive={[Function]}
+              type="type1"
+            />,
+            <NavItem
+              handleNav={[MockFunction]}
+              index={1}
+              isActive={false}
+              name="type2"
+              setActive={[Function]}
+              type="type2"
+            />,
+          ],
+          "className": "nav",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "type1",
+            "nodeType": "function",
+            "props": Object {
+              "handleNav": [MockFunction],
+              "index": 0,
+              "isActive": true,
+              "name": "type1",
+              "setActive": [Function],
+              "type": "type1",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="nav-item type1"
+                style="border-bottom: 0.5rem solid #ff1e1e;"
+              >
+                type1
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "type1",
+                "className": "nav-item type1",
+                "onClick": [Function],
+                "style": Object {
+                  "borderBottom": "0.5rem solid #ff1e1e",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                "type1",
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "type2",
+            "nodeType": "function",
+            "props": Object {
+              "handleNav": [MockFunction],
+              "index": 1,
+              "isActive": false,
+              "name": "type2",
+              "setActive": [Function],
+              "type": "type2",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="nav-item type2"
+                style="border-bottom: 0.5rem solid transparent;"
+              >
+                type2
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "type2",
+                "className": "nav-item type2",
+                "onClick": [Function],
+                "style": Object {
+                  "borderBottom": "0.5rem solid transparent",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                "type2",
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "nav",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
