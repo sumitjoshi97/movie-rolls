@@ -43,5 +43,19 @@
     "react-scripts": "2.1.5",
     "react-test-renderer": "^16.8.6"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.jsx",
+      "!src/App/*",
+      "!src/components/Arrows/**/*",
+      "!src/components/InputSlider/*",
+      "!src/components/Footer/*",
+      "!src/components/HeaderLayout/*",
+      "!src/components/Layout/*",
+      "!src/components/Loading/*",
+      "!src/**/*.js",
+      "!src/index.js",
+      "!src/setupTests.js"
+    ]
   }
 }
