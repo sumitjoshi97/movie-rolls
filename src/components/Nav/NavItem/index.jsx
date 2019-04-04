@@ -13,7 +13,6 @@ const NavItem = ({ index, name, type, isActive, ...props }) => {
 
   return (
     <div
-      name={name}
       className={`nav-item ${type}`}
       style={isActive ? style.active : style.inActive}
       onClick={() => {
