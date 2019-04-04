@@ -16,8 +16,7 @@ export class AuthForm extends Component {
   state = {
     email: '',
     password: '',
-    active: 'login',
-    redirect: false
+    active: 'login'
   }
 
   handleInput = e => {
@@ -39,17 +38,15 @@ export class AuthForm extends Component {
     }
   }
 
-  authWithEmailPassword = async e => {
+  authWithEmailPassword = e => {
     e.preventDefault()
     const { email, password, active } = this.state
-    const { signupUser, loginUserWithEmail, fetchUser } = this.props
+    const { signupUser, loginUserWithEmail } = this.props
 
     if (active === 'login') {
-      await loginUserWithEmail(email, password)
-      await fetchUser()
+      loginUserWithEmail(email, password)
     } else {
-      await signupUser(email, password)
-      await fetchUser()
+      signupUser(email, password)
     }
   }
 
@@ -116,9 +113,7 @@ const mapDispatchToProps = dispatch => ({
   loginUserWithEmail: (email, password) =>
     dispatch(actions.loginUserWithEmailPassword(email, password)),
 
-  loginUserWithSocial: () => dispatch(actions.loginUserWithSocial()),
-
-  fetchUser: () => dispatch(actions.fetchUser())
+  loginUserWithSocial: () => dispatch(actions.loginUserWithSocial())
 })
 
 export default connect(
