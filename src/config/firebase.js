@@ -1,12 +1,12 @@
 import { initializeApp, auth, database } from 'firebase'
 
 const config = {
-  apiKey: 'AIzaSyDoZ46kovfRjmggqNNnSbpbAfxDPsyDKW0',
-  authDomain: 'movie-rolls.firebaseapp.com',
-  databaseURL: 'https://movie-rolls.firebaseio.com',
-  projectId: 'movie-rolls',
-  storageBucket: 'movie-rolls.appspot.com',
-  messagingSenderId: '39363327590'
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
 }
 
 initializeApp(config)
