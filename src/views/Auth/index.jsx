@@ -8,8 +8,8 @@ import './styles.scss'
 
 export class Auth extends Component {
   static propTypes = {
-    isAuth: PropTypes.string,
-    redirectPath: PropTypes.string
+    isAuth: PropTypes.bool.isRequired,
+    redirectPath: PropTypes.string.isRequired
   }
 
   render() {
@@ -29,7 +29,7 @@ export class Auth extends Component {
 }
 
 const mapStateToProps = state => ({
-  isAuth: state.auth.userId,
+  isAuth: state.auth.userId !== '',
   redirectPath: state.auth.redirectPath
 })
 
