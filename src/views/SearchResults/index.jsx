@@ -78,7 +78,6 @@ const mapStateToProps = state => ({
   searchResults: state.search.searchResults
 })
 
-export default connect(
-  mapStateToProps,
-  { getSearchResults }
-)(SearchResults)
+export default connect(mapStateToProps, { getSearchResults })(
+  withRouter(SearchResults)
+)
