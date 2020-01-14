@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className='app'>
         {this.fetchLists()}
-        <Router>
+        <Layout>
           <Switch>
             {routes.map(route => (
               <Route
@@ -37,7 +37,7 @@ class App extends Component {
               />
             ))}
           </Switch>
-        </Router>
+        </Layout>
       </div>
     )
   }
