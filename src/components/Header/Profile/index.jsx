@@ -10,13 +10,11 @@ const Profile = ({ isAuth, profileURL, ...props }) => {
   return (
     <>
       {isAuth ? (
-        <>
-          <button
-            className='profile-btn'
-            onClick={() => {
-              hidden ? setHidden(false) : setHidden(true)
-            }}
-          >
+        <div
+          className='profile'
+          onMouseEnter={() => setHidden(false)}
+          onMouseLeave={() => setHidden(true)}>
+          <div className='profile-btn'>
             <img
               src={
                 profileURL ? profileURL : require('../../../assets/profile.png')
@@ -24,7 +22,9 @@ const Profile = ({ isAuth, profileURL, ...props }) => {
               className='profile-btn__img'
               alt=''
             />
-          </button>
+          </div>
+
+          {/* profile options list - favorites, watch later list , logout */}
           {hidden ? null : (
             <div className='profile-btn__list'>
               <Link to='/profile/favorites'>
@@ -39,13 +39,12 @@ const Profile = ({ isAuth, profileURL, ...props }) => {
               </Link>
               <button
                 className='profile-btn__list__logout'
-                onClick={props.logout}
-              >
+                onClick={props.logout}>
                 logout
               </button>
             </div>
           )}
-        </>
+        </div>
       ) : (
         <Link to='/auth' className='login'>
           Login
@@ -56,9 +55,9 @@ const Profile = ({ isAuth, profileURL, ...props }) => {
 }
 
 Profile.propTypes = {
-  isAuth: PropTypes.string,
+  isAuth: PropTypes.bool.isRequired,
   profileURL: PropTypes.string,
-  logout: PropTypes.func
+  logout: PropTypes.func,
 }
 
 export default Profile
