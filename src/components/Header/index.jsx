@@ -3,31 +3,32 @@ import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import Search from './Search'
 import PhoneSearch from './PhoneSearch'
 import Profile from './Profile'
+import Search from './Search'
 
 import { logout } from '../../actions'
 
 import './styles.scss'
 
 export class Header extends PureComponent {
-  static propsTypes = {
+  static propTypes = {
+    isAuth: PropTypes.bool.isRequired,
     logout: PropTypes.func.isRequired,
-    userId: PropTypes.string
   }
 
   state = {
     text: '',
     search: false,
-    size: 'wide'
+    size: 'wide',
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.onResize()
     window.addEventListener('resize', this.onResize)
   }
-  componentWillUnmount() {
+
+  componentWillUnmount () {
     window.removeEventListener('resize', this.onResize)
   }
 
@@ -42,7 +43,7 @@ export class Header extends PureComponent {
 
   handleInput = e => {
     this.setState({
-      text: e.target.value
+      text: e.target.value,
     })
   }
 
@@ -52,7 +53,7 @@ export class Header extends PureComponent {
       this.setState({ text: '' })
     }
     this.setState(prevState => ({
-      search: !prevState.search
+      search: !prevState.search,
     }))
   }
 
@@ -61,9 +62,7 @@ export class Header extends PureComponent {
     this.props.history.push('/')
   }
 
-  render() {
-    const isAuth = this.props.userId
-
+  render () {
     return (
       <div className='header' style={{ backgroundColor: this.props.color }}>
         <ul className='header__left'>
@@ -72,21 +71,19 @@ export class Header extends PureComponent {
           </li>
 
           <li className='header__left__search'>
-            {this.state.size === 'wide' ? (
-              <Search
+            {
+              this.state.size === 'wide' ? <Search
                 value={this.state.text}
                 isActive={this.state.search}
                 handleInput={this.handleInput}
                 handleSearch={this.handleSearch}
-              />
-            ) : (
+              /> :
               <PhoneSearch
                 value={this.state.text}
                 isActive={this.state.search}
                 handleInput={this.handleInput}
                 handleSearch={this.handleSearch}
-              />
-            )}
+              />}
           </li>
 
           <li className='header__left__browse'>
@@ -95,7 +92,7 @@ export class Header extends PureComponent {
         </ul>
         <ul className='header__right'>
           <li className='header__right__profile'>
-            <Profile isAuth={isAuth} logout={this.handleLogout} />
+            <Profile isAuth={this.props.isAuth} logout={this.handleLogout} />
           </li>
         </ul>
       </div>
@@ -104,10 +101,7 @@ export class Header extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-  userId: state.auth.userId
+  isAuth: state.auth.userId !== null,
 })
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(withRouter(Header))
+export default connect(mapStateToProps, { logout })(withRouter(Header))
