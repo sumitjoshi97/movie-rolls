@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
-  userId: '',
+  userId: null,
   redirectPath: '/'
 }
 
@@ -14,7 +14,7 @@ export default (state = initialState, action) => {
       return { ...state, redirectPath: action.path }
 
     case actionTypes.LOGOUT_SUCCESS:
-      return { ...state, userId: '', redirectPath: '/' }
+      return { ...state, userId: null, redirectPath: '/' }
     default:
       return state
   }

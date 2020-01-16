@@ -7,6 +7,7 @@ import auth from './auth'
 import database from './database'
 import search from './search'
 import discover from './discover'
+import error from './error'
 
 export default combineReducers({
   movies,
@@ -15,5 +16,6 @@ export default combineReducers({
   auth,
   database,
   search,
-  discover
+  discover,
+  error
 })
