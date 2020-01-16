@@ -24,17 +24,18 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-
+    align-items: center;
     & > * {
       padding-right: 3rem;
     }
     &__search {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
     }
     &__brand {
       a {
+        display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 700;
@@ -56,5 +57,9 @@
 
   &__right {
     list-style: none;
+    // width: 4rem;
+    &__profile {
+      // position: absolute;
+    }
   }
 }

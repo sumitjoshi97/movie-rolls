@@ -1,67 +1,72 @@
 @import "../../../sass/variables";
 @import "../../../sass/mixin";
 
-.profile-btn {
-  position: absolute;
-  right: 8rem;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
+.profile {
+  display: flex;
+  flex-direction: column;
 
-  @include respond(phone) {
-    right: 4rem;
-  }
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  &__img {
+  .profile-btn {
     width: 4rem;
     height: 4rem;
-    border-radius: 10rem;
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 8rem;
-    right: 8rem;
-    border: 1px solid rgba(#fff, 0.5);
+    border: none;
+    cursor: pointer;
 
     @include respond(phone) {
+      // right: 4rem;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &__img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 10rem;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 7rem;
       right: 4rem;
-    }
+      width: 14rem;
+      margin-right: 4rem;
+      border: 1px solid rgba(#fff, 0.5);
 
-    &__favorite,
-    &__watch,
-    &__logout {
-      font-size: 1.4rem;
-      padding: 1rem 2rem;
-      width: 100%;
-      background: #353535;
-      color: #fff;
-      border: none;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-      &:focus,
-      &:active {
-        outline: none;
+      @include respond(phone) {
+        width: 15rem;
+        right: 0rem;
       }
 
-      &:hover {
-        background: #3a3a3a;
-      }
-    }
+      &__favorite,
+      &__watch,
+      &__logout {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+        width: 100%;
+        background: #353535;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:focus,
+        &:active {
+          outline: none;
+        }
 
-    &__logout {
-      border-bottom: none;
-      background: $color-dark-primary;
+        &:hover {
+          background: #3a3a3a;
+        }
+      }
+
+      &__logout {
+        border-bottom: none;
+        background: $color-dark-primary;
+      }
     }
   }
 }

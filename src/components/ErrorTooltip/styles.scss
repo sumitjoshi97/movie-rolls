@@ -1,0 +1,35 @@
+.error-tooltip {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(#fff, 0.8);
+  background-color: rgba(#000, 0.4);
+  padding: 6px 12px;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1.4px solid rgba(red, 0.65);
+  border-radius: 4px;
+  opacity: 0;
+  animation: hide-error 2s forwards;
+  z-index: 4000;
+}
+
+@keyframes hide-error {
+  0% {
+    bottom: 0px;
+    opacity: 0;
+  }
+  30% {
+    bottom: 10px;
+    opacity: 1;
+  }
+  60% {
+    bottom: 10px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 20px;
+    opacity: 0;
+  }
+}
