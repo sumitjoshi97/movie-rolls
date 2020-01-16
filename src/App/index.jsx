@@ -1,7 +1,9 @@
 import React, { Component, Suspense } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import ErrorTooltip from '../components/ErrorTooltip'
+import Layout from '../hocs/Layout'
 import Loading from '../components/Loading'
 
 import routes from './routes'
@@ -23,6 +25,7 @@ class App extends Component {
     return (
       <div className='app'>
         {this.fetchLists()}
+        {this.props.isError && <ErrorTooltip />}
         <Layout>
           <Switch>
             {routes.map(route => (
@@ -44,15 +47,14 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  userId: state.auth.userId
+  isError: state.error.isError,
+  userId: state.auth.userId,
 })
 
 const mapDispatchToProps = dispatch => ({
   fetchUser: () => dispatch(actions.fetchUser()),
-  fetchList: (type, userId) => dispatch(actions.fetchList(type, userId))
+  fetchList: (type, userId) => dispatch(actions.fetchList(type, userId)),
+  clearError: () => dispatch(actions.clearError()),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
