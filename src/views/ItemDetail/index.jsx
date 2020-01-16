@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 // import react components
@@ -23,11 +24,11 @@ export class ItemDetail extends Component {
     fetchQueryItemDetails: PropTypes.func.isRequired,
     fetchQueryItemVideos: PropTypes.func.isRequired,
     fetchSimilarItems: PropTypes.func.isRequired,
-    setItemClear: PropTypes.func.isRequired
+    setItemClear: PropTypes.func.isRequired,
   }
 
   state = {
-    currentType: 'overview'
+    currentType: 'overview',
   }
 
   componentDidMount() {
@@ -124,7 +125,7 @@ export class ItemDetail extends Component {
 
   handleNav = itemType => {
     this.setState({
-      currentType: itemType
+      currentType: itemType,
     })
   }
 
@@ -137,7 +138,7 @@ export class ItemDetail extends Component {
             handleNav={this.handleNav}
             options={[
               { type: 'overview', name: 'overview' },
-              { type: 'similar', name: 'more like this' }
+              { type: 'similar', name: 'more like this' },
             ]}
           />
         </div>
@@ -152,7 +153,7 @@ const mapStateToProps = state => ({
   item: state.item.current,
   credits: state.item.credits,
   videos: state.item.videos,
-  similar: state.item.similar
+  similar: state.item.similar,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -168,7 +169,7 @@ const mapDispatchToProps = dispatch => ({
   fetchSimilarItems: (type, itemId) =>
     dispatch(actions.getSimilarItems(type, itemId)),
 
-  setItemClear: () => dispatch(actions.setItemClear())
+  setItemClear: () => dispatch(actions.setItemClear()),
 })
 
 export default connect(
