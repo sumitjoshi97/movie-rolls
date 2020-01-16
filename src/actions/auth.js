@@ -25,7 +25,7 @@ export const createUser = (email, password) => dispatch => {
   authRef
     .createUserWithEmailAndPassword(email, password)
     .then(res => console.log('success'))
-    .catch(err => setError())
+    .catch(err => dispatch(setError()))
 }
 
 /////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@ export const loginUserWithEmailPassword = (email, password) => dispatch => {
   return authRef
     .signInWithEmailAndPassword(email, password)
     .then(res => console.log('success'))
-    .catch(err => setError())
+    .catch(err => dispatch(setError()))
 }
 
 // login user with social
@@ -43,7 +43,7 @@ export const loginUserWithSocial = () => dispatch => {
   return authRef
     .signInWithPopup(googleProvider)
     .then(res => console.log('success'))
-    .catch(err => setError())
+    .catch(err => dispatch(setError()))
 }
 
 /////////////////////////////////////////////////////////////////
@@ -57,7 +57,7 @@ export const logout = () => dispatch => {
   return authRef
     .signOut()
     .then(() => dispatch(logoutSuccess()))
-    .catch(err => setError())
+    .catch(err => dispatch(setError()))
 }
 
 //////////////////////////////////////////////////////////////

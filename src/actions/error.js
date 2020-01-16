@@ -1,5 +1,13 @@
-import { SET_ERROR } from './actionTypes'
+import * as actionTypes from './actionTypes'
 
 export const setError = () => ({
-  type: SET_ERROR
+  type: actionTypes.SET_ERROR,
 })
+
+export const setErrorClear = () => ({
+  type: actionTypes.SET_ERROR_CLEAR,
+})
+
+export const clearError = () => dispatch => {
+  return dispatch(setErrorClear())
+}

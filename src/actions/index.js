@@ -37,3 +37,5 @@ export { addToList, removeFromList, fetchList } from './database'
 export { getSearchResults } from './search'
 
 export { getDiscoverMovieResults, getDiscoverShowResults } from './discover'
+
+export { clearError } from './error'
